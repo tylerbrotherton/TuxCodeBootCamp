@@ -1,6 +1,4 @@
-Project of Tyler Brotherton
 
-Tux's Code Boot Camp
 
 Tux's Code Boot Camp is an immersive, high-intensity programming education experience designed to transform civilians into battle-ready code warriors. Inspired by the discipline and rigor of military basic training, our boot camp provides a structured and supportive environment for mastering the complexities of programming. Prepare to drop and give us 20 lines of code!
 
@@ -17,12 +15,6 @@ Structured Curriculum: The curriculum is meticulously planned to cover essential
 Hands-On Experience: Learning by doing is at the core of our approach. Participants will work on a variety of projects, from simple scripts to complex applications, gaining practical experience that reinforces theoretical knowledge. It's like learning to drive a tank—you can't just read the manual; you've got to get behind the wheel!
 
 Collaborative Environment: Just like in a military unit, teamwork and collaboration are crucial. Participants will work in groups, fostering a sense of camaraderie and mutual support. This collaborative environment not only enhances learning but also prepares participants for team-based work in professional settings. Think of it as your new platoon—you're all in this together!
-
-Expert Guidance: Under the watchful eye of Tux, the Linux mascot, and our team of experienced instructors, participants will receive personalized guidance and support. Our instructors are industry professionals with extensive experience in software development, ensuring that participants receive the highest quality of instruction. They're like your drill sergeants, pushing you to be the best coder you can be.
-
-Real-World Projects: To bridge the gap between theory and practice, participants will work on real-world projects that simulate the challenges faced by professional developers. These projects provide valuable experience and help participants build a portfolio that showcases their skills to potential employers. It's like your final mission—proving you've got what it takes to make it in the real world.
-
-Career Support: Our commitment to participants extends beyond the boot camp. We offer career support services, including resume building, interview preparation, and job placement assistance, to help graduates launch successful careers in technology. Think of it as your transition back to civilian life—we'll make sure you're ready to take on the world!
 
 Join Us
 
