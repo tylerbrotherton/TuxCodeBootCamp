@@ -19,3 +19,6 @@ Collaborative Environment: Just like in a military unit, teamwork and collaborat
 Join Us
 
 Tux's Code Boot Camp is more than just a programming education program; it's a transformative journey that equips participants with the skills, confidence, and discipline needed to excel in the world of programming. Whether you're a beginner looking to start a career in tech or an experienced professional seeking to enhance your skills, Tux's Code Boot Camp is the ultimate destination for mastering the art of coding. So, are you ready to enlist and become a skilled code warrior under the guidance of Tux? Drop and give us 20 lines of code—now!
+
+
+the lux penguin was created by Larry Ewing
