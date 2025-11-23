@@ -1,4 +1,4 @@
-
+Project by Tyler Brotherton
 
 Tux's Code Boot Camp is an immersive, high-intensity programming education experience designed to transform civilians into battle-ready code warriors. Inspired by the discipline and rigor of military basic training, our boot camp provides a structured and supportive environment for mastering the complexities of programming. Prepare to drop and give us 20 lines of code!
 
