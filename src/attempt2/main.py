@@ -20,10 +20,10 @@ class StudentProgress:
         self.joined_date = datetime.now()
         self.languages_started = []
         self.languages_completed = []
-        self.completion_attempts = {}  # Track how many times they tried
+        self.completion_attempts = {}
         self.decision_struggle_count = 0
         self.last_session = None
-        self.motivation_level = 50  # 0-100 scale
+        self.motivation_level = 50
         self.streak_days = 0
         
     def update_motivation(self, change):
@@ -110,11 +110,9 @@ class TuxLanguageLearner:
         self.root.geometry("1200x800")
         self.root.configure(bg='#2b2b2b')
         
-        # Student tracking
         self.current_student = None
         self.tux_sergeant = TuxDrillSergeant()
         
-        # Language Database with difficulty progression
         self.languages = {
             "Python": {
                 "description": "High-level, interpreted language known for readability and versatility.",
@@ -139,12 +137,12 @@ class TuxLanguageLearner:
                 ]
             },
             "Go": {
-                "description": "Concurrent programming language developed by Google. BUILT FOR THE FUTURE!",
+                "description": "Concurrent programming language developed by Google.",
                 "difficulty": "Intermediate",
                 "drill_sergeant_take": "Go is LEAN, MEAN, and gets the JOB DONE! Learn this and you're UNSTOPPABLE!",
                 "use_cases": ["Cloud Computing", "Network Programming", "Microservices"],
                 "sample_code": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    fmt.Println(\"Hello, Tux!\")\n}",
-                "learning_resources":[
+                "learning_resources": [
                     "https://go.dev/",
                     "https://www.freecodecamp.org/news/learn-golang-handbook/"
                 ]
@@ -182,6 +180,83 @@ class TuxLanguageLearner:
                     "https://www.cplusplus.com/doc/tutorial/"
                 ]
             },
+            "Assembly": {
+                "description": "Low-level language that directly corresponds to machine instructions.",
+                "difficulty": "Expert",
+                "drill_sergeant_take": "ASSEMBLY is for the ELITE SOLDIERS! This is where the REAL WORK gets done!",
+                "use_cases": ["Compiler Design", "Embedded Systems", "Reverse Engineering"],
+                "sample_code": "section .data\n    msg db 'Hello, Tux!', 0\nsection .text\n    global _start\n_start:\n    mov eax, 1\n    mov ebx, 0",
+                "learning_resources": [
+                    "https://www.cs.virginia.edu/~evans/cs216/guides/x86.html",
+                    "https://www.assemblylanguagetuts.com/"
+                ]
+            },
+            "C#": {
+                "description": "Microsoft's object-oriented language for .NET ecosystem.",
+                "difficulty": "Intermediate",
+                "drill_sergeant_take": "C# is POWERFUL and MODERN! Microsoft BUILT this for PROFESSIONALS!",
+                "use_cases": ["Windows Applications", "Game Development", "Enterprise Software"],
+                "sample_code": "using System;\n\nclass TuxProgram {\n    static void Main() {\n        Console.WriteLine(\"Hello, Tux!\");\n    }\n}",
+                "learning_resources": [
+                    "https://docs.microsoft.com/en-us/dotnet/csharp/",
+                    "https://www.codecademy.com/learn/learn-c-sharp"
+                ]
+            },
+            "LOLCODE": {
+                "description": "Esoteric programming language based on LOLcat internet meme.",
+                "difficulty": "Novelty",
+                "drill_sergeant_take": "LOLCODE is UNCONVENTIONAL! It teaches you to THINK DIFFERENT and HAVE FUN!",
+                "use_cases": ["Humor", "Esoteric Programming", "Creative Coding"],
+                "sample_code": "HAI 1.2\n    CAN HAS STDIO?\n    VISIBLE \"HELLO TUX!\"\n    KTHXBYE",
+                "learning_resources": [
+                    "https://en.wikipedia.org/wiki/LOLCODE",
+                    "https://github.com/justinmeza/lolcode-spec"
+                ]
+            },
+            "Holy C": {
+                "description": "Programming language created by Terry A. Davis for TempleOS.",
+                "difficulty": "Unique",
+                "drill_sergeant_take": "Holy C is EXPERIMENTAL! It's for the VISIONARIES willing to explore!",
+                "use_cases": ["TempleOS Operating System", "Experimental Computing", "System Design"],
+                "sample_code": "void main() {\n    Print(\"Hello, Tux!\");\n}",
+                "learning_resources": [
+                    "https://www.templeos.org",
+                    "https://en.wikipedia.org/wiki/TempleOS"
+                ]
+            },
+            "INTERCAL": {
+                "description": "Intentionally Complicated programming language designed to be absurd.",
+                "difficulty": "Deliberately Difficult",
+                "drill_sergeant_take": "INTERCAL is a CHALLENGE like no other! MASTER this and you can MASTER anything!",
+                "use_cases": ["Humor", "Esoteric Programming Challenge", "Mental Exercise"],
+                "sample_code": "DO ,1 <- #1\nPLEASE DO ,1 SUB #1 <- #1\nPLEASE DO ,1 SUB #2 <- #0\nDO COME FROM ,1",
+                "learning_resources": [
+                    "https://www.muppetlabs.com/~breadbox/intercal/",
+                    "https://en.wikipedia.org/wiki/INTERCAL"
+                ]
+            },
+            "Shakespeare": {
+                "description": "Esoteric programming language that looks like a Shakespearean play.",
+                "difficulty": "Artistic Challenge",
+                "drill_sergeant_take": "SHAKESPEARE is ART meets CODE! Show me your CREATIVITY, recruit!",
+                "use_cases": ["Artistic Programming", "Coding Creativity", "Theatrical Expression"],
+                "sample_code": "Romeo, a young programmer.\nJuliet, a beautiful variable.\n\nRomeo: Thou art the sum of a proud strong lord!",
+                "learning_resources": [
+                    "https://shakespearelang.sourceforge.net/",
+                    "https://en.wikipedia.org/wiki/Shakespeare_Programming_Language"
+                ]
+            },
+            "Rockstar": {
+                "description": "Programming language designed to look like song lyrics.",
+                "difficulty": "Creative",
+                "drill_sergeant_take": "ROCKSTAR is MUSIC meets CODE! If you can COMPOSE, you can PROGRAM!",
+                "use_cases": ["Artistic Coding", "Programmer Humor", "Musical Expression"],
+                "sample_code": "Rock on, my heart!\nShout it out loud!\nRock on is as loud as the fire\nFire is 100",
+                "learning_resources": [
+                    "https://github.com/RockstarLang/rockstar",
+                    "https://esolangs.org/wiki/Rockstar"
+                ]
+            },
         }
         
         self.challenge_templates = {
@@ -215,6 +290,41 @@ class TuxLanguageLearner:
                 ("INTERMEDIATE MISSION", "Build a template-based data structure", "Medium"),
                 ("ADVANCED OPERATION", "Implement a graphics rendering engine", "Hard"),
             ],
+            "Assembly": [
+                ("BEGINNER DRILL", "Write a simple mathematical operation in pure assembly", "Easy"),
+                ("INTERMEDIATE MISSION", "Create a basic input/output routine", "Medium"),
+                ("ADVANCED OPERATION", "Implement a low-level encryption algorithm", "Hard"),
+            ],
+            "C#": [
+                ("BEGINNER DRILL", "Create a Windows console application with user input", "Easy"),
+                ("INTERMEDIATE MISSION", "Build a file management utility with error handling", "Medium"),
+                ("ADVANCED OPERATION", "Implement a networked application with threading", "Hard"),
+            ],
+            "LOLCODE": [
+                ("BEGINNER DRILL", "Write a program that displays a funny message", "Easy"),
+                ("INTERMEDIATE MISSION", "Create a meme generator in LOLCODE", "Medium"),
+                ("ADVANCED OPERATION", "Implement a silly calculator with multiple operations", "Hard"),
+            ],
+            "Holy C": [
+                ("BEGINNER DRILL", "Create a simple graphics demo", "Easy"),
+                ("INTERMEDIATE MISSION", "Implement a basic system interrupt handler", "Medium"),
+                ("ADVANCED OPERATION", "Write a minimalist operating system routine", "Hard"),
+            ],
+            "INTERCAL": [
+                ("BEGINNER DRILL", "Write Hello World in the most convoluted way possible", "Easy"),
+                ("INTERMEDIATE MISSION", "Create a program that deliberately breaks conventions", "Medium"),
+                ("ADVANCED OPERATION", "Implement a challenge that makes code unreadable", "Hard"),
+            ],
+            "Shakespeare": [
+                ("BEGINNER DRILL", "Write a play that outputs a simple message", "Easy"),
+                ("INTERMEDIATE MISSION", "Create a dramatic mathematical operation", "Medium"),
+                ("ADVANCED OPERATION", "Implement a character-driven algorithm", "Hard"),
+            ],
+            "Rockstar": [
+                ("BEGINNER DRILL", "Compose a song that outputs a message", "Easy"),
+                ("INTERMEDIATE MISSION", "Create a lyrical sorting algorithm", "Medium"),
+                ("ADVANCED OPERATION", "Write a rock ballad that solves a math problem", "Hard"),
+            ],
         }
 
     def create_login_screen(self):
@@ -222,7 +332,6 @@ class TuxLanguageLearner:
         login_frame = tk.Frame(self.root, bg='#1a1a1a')
         login_frame.pack(fill=tk.BOTH, expand=True, padx=20, pady=20)
         
-        # Tux's welcome banner
         banner_label = tk.Label(
             login_frame,
             text="TUX CODE BOOT CAMP",
@@ -241,7 +350,6 @@ class TuxLanguageLearner:
         )
         subtitle.pack(pady=10)
         
-        # Tux introduction
         intro_text = scrolledtext.ScrolledText(
             login_frame,
             height=8,
@@ -273,7 +381,6 @@ Now... what's your NAME, recruit?
         intro_text.insert(tk.END, intro_message)
         intro_text.config(state=tk.DISABLED)
         
-        # Name entry
         name_frame = tk.Frame(login_frame, bg="#1a1a1a")
         name_frame.pack(pady=20)
         
@@ -297,7 +404,6 @@ Now... what's your NAME, recruit?
         self.name_entry.pack(pady=10)
         self.name_entry.bind('<Return>', lambda e: self.enroll_student())
         
-        # Enroll button
         enroll_button = tk.Button(
             login_frame,
             text="ENROLL IN BOOT CAMP!",
@@ -320,18 +426,16 @@ Now... what's your NAME, recruit?
         
         self.current_student = StudentProgress(name)
         
-        # Clear current frame
         for widget in self.root.winfo_children():
             widget.destroy()
         
-        # Show enrollment confirmation
         self.show_enrollment_speech(name)
 
     def show_enrollment_speech(self, name):
         """Dramatic enrollment speech from Tux"""
         speech_window = tk.Toplevel(self.root)
         speech_window.title("Boot Camp Enrollment")
-        speech_window.geometry("700x500")
+        speech_window.geometry("700x550")
         speech_window.configure(bg='#1a1a1a')
         
         speech_frame = tk.Frame(speech_window, bg='#1a1a1a')
@@ -376,10 +480,10 @@ You have DECIDED to be here. I see it. That TAKES GUTS!
 
 Now, here's what I need from you:
 
-✓ COMMITMENT - Show up. Do the work. Don't make excuses.
-✓ HONESTY - Tell me when you're struggling. I've BEEN THERE.
-✓ EFFORT - Give me 100%. That's all I ask.
-✓ DETERMINATION - When it gets hard, remember: IT'S SUPPOSED TO BE HARD!
+COMMITMENT - Show up. Do the work. Don't make excuses.
+HONESTY - Tell me when you're struggling. I've BEEN THERE.
+EFFORT - Give me 100%. That's all I ask.
+DETERMINATION - When it gets hard, remember: IT'S SUPPOSED TO BE HARD!
 
 The pain you feel right now? That's not weakness leaving your body - 
 that's INDECISION DYING and DETERMINATION being BORN!
@@ -410,17 +514,14 @@ LET'S MOVE OUT!
 
     def create_main_interface(self):
         """Main learning interface"""
-        # Clear existing widgets
         for widget in self.root.winfo_children():
             widget.destroy()
         
         self.root.geometry("1400x900")
         
-        # Main container
         main_frame = tk.Frame(self.root, bg='#1a1a1a')
         main_frame.pack(fill=tk.BOTH, expand=True)
         
-        # Top banner with student info
         banner_frame = tk.Frame(main_frame, bg='#ff6b6b')
         banner_frame.pack(fill=tk.X, padx=0, pady=0)
         
@@ -446,11 +547,9 @@ LET'S MOVE OUT!
         )
         motivation_label.pack(side=tk.RIGHT)
         
-        # Content frame
         content_frame = tk.Frame(main_frame, bg='#1a1a1a')
         content_frame.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
         
-        # Left sidebar - Language selection
         left_frame = tk.Frame(content_frame, bg='#2b2b2b')
         left_frame.pack(side=tk.LEFT, fill=tk.BOTH, padx=10, pady=10)
         
@@ -463,12 +562,11 @@ LET'S MOVE OUT!
         )
         languages_label.pack(pady=10)
         
-        # Language listbox
         self.language_listbox = tk.Listbox(
             left_frame,
             width=20,
-            height=12,
-            font=("Arial", 11, "bold"),
+            height=15,
+            font=("Arial", 10, "bold"),
             bg="#3b3b3b",
             fg="#00ff00",
             selectmode=tk.SINGLE
@@ -481,15 +579,13 @@ LET'S MOVE OUT!
         scrollbar.config(command=self.language_listbox.yview)
         
         for language in sorted(self.languages.keys()):
-            self.language_listbox.insert(tk.END, f"> {language}")
+            self.language_listbox.insert(tk.END, language)
         
         self.language_listbox.bind('<<ListboxSelect>>', self.show_language_details)
         
-        # Right frame - Language details
         right_frame = tk.Frame(content_frame, bg='#2b2b2b')
         right_frame.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True, padx=10, pady=10)
         
-        # Language name
         self.language_name_label = tk.Label(
             right_frame,
             text="SELECT A LANGUAGE TO BEGIN",
@@ -499,7 +595,6 @@ LET'S MOVE OUT!
         )
         self.language_name_label.pack(pady=10)
         
-        # Tux's take on the language
         self.tux_commentary_text = tk.Text(
             right_frame,
             height=3,
@@ -511,7 +606,6 @@ LET'S MOVE OUT!
         )
         self.tux_commentary_text.pack(pady=10)
         
-        # Description
         self.description_text = tk.Text(
             right_frame,
             height=5,
@@ -523,7 +617,6 @@ LET'S MOVE OUT!
         )
         self.description_text.pack(pady=10)
         
-        # Sample code
         code_label = tk.Label(
             right_frame,
             text="SAMPLE CODE:",
@@ -535,7 +628,7 @@ LET'S MOVE OUT!
         
         self.code_sample_text = tk.Text(
             right_frame,
-            height=8,
+            height=6,
             width=70,
             font=("Courier", 9),
             bg="#1a1a1a",
@@ -544,53 +637,52 @@ LET'S MOVE OUT!
         )
         self.code_sample_text.pack(pady=10)
         
-        # Action buttons
         button_frame = tk.Frame(right_frame, bg='#2b2b2b')
         button_frame.pack(fill=tk.X, pady=10)
         
         resources_button = tk.Button(
             button_frame,
             text="LEARNING RESOURCES",
-            font=("Arial", 11, "bold"),
+            font=("Arial", 10, "bold"),
             bg="#00aa00",
             fg="#ffffff",
             command=self.open_learning_resources,
-            padx=15,
-            pady=8
+            padx=10,
+            pady=6
         )
-        resources_button.pack(side=tk.LEFT, padx=5)
+        resources_button.pack(side=tk.LEFT, padx=3)
         
         challenge_button = tk.Button(
             button_frame,
-            text="TAKE THE CHALLENGE",
-            font=("Arial", 11, "bold"),
+            text="TAKE CHALLENGE",
+            font=("Arial", 10, "bold"),
             bg="#ff6b6b",
             fg="#ffffff",
             command=self.generate_challenge,
-            padx=15,
-            pady=8
+            padx=10,
+            pady=6
         )
-        challenge_button.pack(side=tk.LEFT, padx=5)
+        challenge_button.pack(side=tk.LEFT, padx=3)
         
         commit_button = tk.Button(
             button_frame,
-            text="✓ I COMMIT TO THIS LANGUAGE",
-            font=("Arial", 11, "bold"),
+            text="COMMIT",
+            font=("Arial", 10, "bold"),
             bg="#ffd93d",
             fg="#000000",
             command=self.commit_to_language,
-            padx=15,
-            pady=8
+            padx=10,
+            pady=6
         )
-        commit_button.pack(side=tk.LEFT, padx=5)
+        commit_button.pack(side=tk.LEFT, padx=3)
 
     def show_language_details(self, event):
         """Display language details when selected"""
         try:
             selected_index = self.language_listbox.curselection()[0]
-            selected_language = self.language_listbox.get(selected_index).replace("> ", "")
+            selected_language = self.language_listbox.get(selected_index)
             
-            self.language_name_label.config(text=f"FIGHT {selected_language.upper()}")
+            self.language_name_label.config(text=selected_language.upper())
             
             self.tux_commentary_text.config(state=tk.NORMAL)
             self.tux_commentary_text.delete(1.0, tk.END)
@@ -604,7 +696,7 @@ LET'S MOVE OUT!
             desc = f"Difficulty: {language_info['difficulty']}\n\n"
             desc += f"Use Cases:\n"
             for use_case in language_info['use_cases']:
-                desc += f"• {use_case}\n"
+                desc += f"- {use_case}\n"
             
             self.description_text.insert(tk.END, desc)
             self.description_text.config(state=tk.DISABLED)
@@ -621,12 +713,12 @@ LET'S MOVE OUT!
         """Open learning resources in browser"""
         try:
             selected_index = self.language_listbox.curselection()[0]
-            selected_language = self.language_listbox.get(selected_index).replace("> ", "")
+            selected_language = self.language_listbox.get(selected_index)
             resources = self.languages[selected_language]['learning_resources']
             
             resource_window = tk.Toplevel(self.root)
             resource_window.title(f"{selected_language} Resources - GET LEARNING!")
-            resource_window.geometry("600x300")
+            resource_window.geometry("600x250")
             resource_window.configure(bg='#1a1a1a')
             
             frame = tk.Frame(resource_window, bg='#1a1a1a')
@@ -634,7 +726,7 @@ LET'S MOVE OUT!
             
             label = tk.Label(
                 frame,
-                text=f"OPEN THESE RESOURCES TO BECOME A {selected_language.upper()} MASTER!",
+                text=f"OPEN THESE RESOURCES FOR {selected_language.upper()}!",
                 font=("Arial", 12, "bold"),
                 fg="#00ff00",
                 bg="#1a1a1a",
@@ -648,21 +740,21 @@ LET'S MOVE OUT!
                 
                 resource_button = tk.Button(
                     frame,
-                    text=f"Resource {i}: {resource[:50]}...",
-                    font=("Arial", 10),
+                    text=f"Resource {i}: {resource[:45]}...",
+                    font=("Arial", 9),
                     bg="#2b2b2b",
                     fg="#00ff00",
                     command=open_resource,
                     anchor=tk.W,
                     padx=10,
-                    pady=10
+                    pady=8
                 )
-                resource_button.pack(fill=tk.X, pady=5)
+                resource_button.pack(fill=tk.X, pady=4)
             
             motivation_text = tk.Label(
                 frame,
-                text="\nGO LEARN! I'll be here when you're ready for a CHALLENGE!",
-                font=("Arial", 11, "italic"),
+                text="\nGO LEARN! Report back when ready for a CHALLENGE!",
+                font=("Arial", 10, "italic"),
                 fg="#ffd93d",
                 bg="#1a1a1a"
             )
@@ -675,7 +767,7 @@ LET'S MOVE OUT!
         """Student commits to learning a language"""
         try:
             selected_index = self.language_listbox.curselection()[0]
-            selected_language = self.language_listbox.get(selected_index).replace("> ", "")
+            selected_language = self.language_listbox.get(selected_index)
             
             if selected_language not in self.current_student.languages_started:
                 self.current_student.languages_started.append(selected_language)
@@ -684,7 +776,7 @@ LET'S MOVE OUT!
                 messagebox.showinfo(
                     "COMMITMENT ACCEPTED!",
                     f"THAT'S WHAT I LIKE TO SEE!\n\n"
-                    f"You've committed to learning {selected_language}!\n\n"
+                    f"You've committed to {selected_language}!\n\n"
                     f"Now get to work and prove you're SERIOUS!\n\n"
                     f"Motivation: {int(self.current_student.motivation_level)}/100"
                 )
@@ -702,10 +794,10 @@ LET'S MOVE OUT!
         """Generate a coding challenge"""
         try:
             selected_index = self.language_listbox.curselection()[0]
-            selected_language = self.language_listbox.get(selected_index).replace("> ", "")
+            selected_language = self.language_listbox.get(selected_index)
             
             if selected_language not in self.challenge_templates:
-                messagebox.showwarning("TUX SAYS:", f"I'm still building challenges for {selected_language}!")
+                messagebox.showwarning("TUX SAYS:", f"Still building challenges for {selected_language}!")
                 return
             
             challenges = self.challenge_templates[selected_language]
@@ -713,69 +805,64 @@ LET'S MOVE OUT!
             
             challenge_window = tk.Toplevel(self.root)
             challenge_window.title(f"{challenge_name} - {selected_language}")
-            challenge_window.geometry("700x500")
+            challenge_window.geometry("700x480")
             challenge_window.configure(bg='#1a1a1a')
             
             frame = tk.Frame(challenge_window, bg='#1a1a1a')
             frame.pack(fill=tk.BOTH, expand=True, padx=20, pady=20)
             
-            # Challenge header
             header_label = tk.Label(
                 frame,
-                text=f"{challenge_name} - {selected_language.upper()} ",
-                font=("Arial", 16, "bold"),
+                text=f"{challenge_name} - {selected_language.upper()}",
+                font=("Arial", 15, "bold"),
                 fg="#ff6b6b",
                 bg="#1a1a1a"
             )
-            header_label.pack(pady=10)
+            header_label.pack(pady=8)
             
-            # Difficulty indicator
             difficulty_colors = {"Easy": "#00ff00", "Medium": "#ffd93d", "Hard": "#ff6b6b"}
             difficulty_label = tk.Label(
                 frame,
                 text=f"Difficulty: {difficulty}",
-                font=("Arial", 12, "bold"),
+                font=("Arial", 11, "bold"),
                 fg=difficulty_colors.get(difficulty, "#ffffff"),
                 bg="#1a1a1a"
             )
-            difficulty_label.pack(pady=5)
+            difficulty_label.pack(pady=4)
             
-            # Challenge description
             challenge_text = scrolledtext.ScrolledText(
                 frame,
-                height=12,
+                height=10,
                 width=80,
-                font=("Courier", 11),
+                font=("Courier", 10),
                 bg="#2b2b2b",
                 fg="#ffffff",
                 wrap=tk.WORD
             )
-            challenge_text.pack(fill=tk.BOTH, expand=True, pady=10)
+            challenge_text.pack(fill=tk.BOTH, expand=True, pady=8)
             
             challenge_text.insert(tk.END, challenge_desc)
             challenge_text.config(state=tk.DISABLED)
             
-            # Tux's motivation
             motivation_label = tk.Label(
                 frame,
-                text=self.tux_sergeant.get_motivational_speech("challenge"),
-                font=("Arial", 11, "italic"),
+                text=self.tux_sergeant.get_motivational_speech("completion"),
+                font=("Arial", 10, "italic"),
                 fg="#00ff00",
                 bg="#1a1a1a",
                 wraplength=650
             )
-            motivation_label.pack(pady=10)
+            motivation_label.pack(pady=8)
             
-            # Action buttons
             button_frame = tk.Frame(frame, bg='#1a1a1a')
-            button_frame.pack(fill=tk.X, pady=10)
+            button_frame.pack(fill=tk.X, pady=8)
             
             def accept_challenge():
                 self.current_student.update_motivation(15)
                 messagebox.showinfo(
                     "CHALLENGE ACCEPTED!",
                     f"NOW GET TO WORK!\n\n"
-                    f"Complete this challenge and report back!\n"
+                    f"Complete this and report back!\n"
                     f"NO EXCUSES!\n\n"
                     f"Motivation: {int(self.current_student.motivation_level)}/100"
                 )
@@ -784,26 +871,26 @@ LET'S MOVE OUT!
             accept_button = tk.Button(
                 button_frame,
                 text="ACCEPT CHALLENGE!",
-                font=("Arial", 12, "bold"),
+                font=("Arial", 11, "bold"),
                 bg="#ff6b6b",
                 fg="#ffffff",
                 command=accept_challenge,
-                padx=20,
-                pady=10
+                padx=15,
+                pady=8
             )
-            accept_button.pack(side=tk.LEFT, padx=5)
+            accept_button.pack(side=tk.LEFT, padx=4)
             
             skip_button = tk.Button(
                 button_frame,
                 text="Maybe Later",
-                font=("Arial", 10),
+                font=("Arial", 9),
                 bg="#3b3b3b",
                 fg="#ffffff",
                 command=challenge_window.destroy,
-                padx=15,
-                pady=8
+                padx=12,
+                pady=6
             )
-            skip_button.pack(side=tk.LEFT, padx=5)
+            skip_button.pack(side=tk.LEFT, padx=4)
             
         except IndexError:
             messagebox.showwarning("TUX SAYS:", "PICK A LANGUAGE FIRST!")
