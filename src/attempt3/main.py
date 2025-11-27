@@ -6,6 +6,24 @@ import os
 from datetime import datetime
 from enum import Enum
 
+"""
+TUX CODE BOOT CAMP - With AI Code Analysis
+
+REQUIREMENTS:
+pip install aiohttp
+
+This application uses the Claude API to analyze student code submissions.
+The API connection is handled through Anthropic's built-in infrastructure
+when running in Claude artifacts, so no API key is needed.
+
+FEATURES:
+- AI-powered code analysis using Claude Sonnet 4
+- Emotional feedback from Sergeant Tux based on code quality
+- Automatic file creation for challenges
+- Real-time motivation tracking
+- Multi-language support
+"""
+
 # =====================================================================
 # ENUMS AND DATA CLASSES
 # =====================================================================
@@ -61,6 +79,153 @@ class StudentProgress:
                 "You've got the FIRE, recruit! Keep BURNING!",
                 "Outstanding! You're showing TRUE DEDICATION!",
             ])
+
+
+# =====================================================================
+# AI CODE ANALYZER
+# =====================================================================
+
+class CodeAnalyzer:
+    """Uses Claude API to analyze student code submissions"""
+    
+    def __init__(self):
+        self.api_url = "https://api.anthropic.com/v1/messages"
+    
+    async def analyze_code(self, language, challenge_desc, student_code):
+        """Analyze student code and provide feedback"""
+        try:
+            import aiohttp
+            import asyncio
+            
+            prompt = self._build_analysis_prompt(language, challenge_desc, student_code)
+            
+            async with aiohttp.ClientSession() as session:
+                async with session.post(
+                    self.api_url,
+                    headers={"Content-Type": "application/json"},
+                    json={
+                        "model": "claude-sonnet-4-20250514",
+                        "max_tokens": 1000,
+                        "messages": [
+                            {"role": "user", "content": prompt}
+                        ]
+                    }
+                ) as response:
+                    data = await response.json()
+                    
+                    if response.status != 200:
+                        return self._create_error_result(data)
+                    
+                    return self._parse_ai_response(data)
+        
+        except Exception as e:
+            return {
+                "success": False,
+                "correct": False,
+                "feedback": f"Analysis error: {str(e)}",
+                "tux_emotion": "confused"
+            }
+    
+    def _build_analysis_prompt(self, language, challenge_desc, student_code):
+        """Build the prompt for code analysis"""
+        return f"""You are Sergeant Tux analyzing recruit code for a programming boot camp. 
+
+CHALLENGE: {challenge_desc}
+LANGUAGE: {language}
+
+STUDENT CODE:
+```{language.lower()}
+{student_code}
+```
+
+Analyze this code and respond in this EXACT JSON format:
+{{
+    "correct": true/false,
+    "completeness": 0-100,
+    "quality_score": 0-100,
+    "overachiever": true/false,
+    "issues": ["issue1", "issue2"],
+    "strengths": ["strength1", "strength2"],
+    "suggestions": ["suggestion1", "suggestion2"],
+    "summary": "brief summary"
+}}
+
+IMPORTANT ANALYSIS CRITERIA:
+1. Does it meet or EXCEED the challenge requirements?
+2. If the student went BEYOND requirements (added error handling, additional features, better practices), they are an OVERACHIEVER
+3. Award high scores (90+) for code that exceeds expectations
+4. Check syntax and functionality
+5. Recognize professional practices (error handling, input validation, memory safety, good naming)
+
+Be tough but FAIR. Recognize excellence when you see it. If a recruit went above and beyond, they deserve HIGH MARKS!
+
+If the challenge is "beginner" level but the code shows "intermediate" or "advanced" practices, this is OUTSTANDING and should score 95+."""
+    
+    def _parse_ai_response(self, data):
+        """Parse AI response into usable format"""
+        try:
+            content = data.get("content", [])
+            text = ""
+            
+            for block in content:
+                if block.get("type") == "text":
+                    text += block.get("text", "")
+            
+            # Clean up potential markdown formatting
+            text = text.strip()
+            if text.startswith("```json"):
+                text = text.replace("```json", "").replace("```", "").strip()
+            
+            import json
+            analysis = json.loads(text)
+            
+            # Determine Tux's emotion based on results
+            emotion = self._determine_tux_emotion(analysis)
+            
+            return {
+                "success": True,
+                "correct": analysis.get("correct", False),
+                "completeness": analysis.get("completeness", 0),
+                "quality_score": analysis.get("quality_score", 0),
+                "issues": analysis.get("issues", []),
+                "strengths": analysis.get("strengths", []),
+                "suggestions": analysis.get("suggestions", []),
+                "summary": analysis.get("summary", ""),
+                "tux_emotion": emotion
+            }
+            
+        except Exception as e:
+            return self._create_error_result({"error": str(e)})
+    
+    def _determine_tux_emotion(self, analysis):
+        """Determine Tux's emotional response based on code quality"""
+        correct = analysis.get("correct", False)
+        completeness = analysis.get("completeness", 0)
+        quality = analysis.get("quality_score", 0)
+        overachiever = analysis.get("overachiever", False)
+        
+        # Special recognition for overachievers
+        if overachiever or (correct and quality >= 95):
+            return "exceptional"  # New top tier!
+        elif correct and completeness >= 90 and quality >= 80:
+            return "proud"
+        elif correct and completeness >= 70:
+            return "satisfied"
+        elif completeness >= 50:
+            return "encouraging"
+        elif completeness >= 30:
+            return "stern"
+        else:
+            return "disappointed"
+    
+    def _create_error_result(self, error_data):
+        """Create error result"""
+        return {
+            "success": False,
+            "correct": False,
+            "feedback": f"Could not analyze code: {error_data}",
+            "tux_emotion": "confused"
+        }
 
 
 # =====================================================================
@@ -683,6 +848,7 @@ class TuxDrillSergeant:
     
     def __init__(self):
         self.drill_level = DrillLevel.ENCOURAGEMENT
+        self.current_emotion = "neutral"
         self.favorite_expressions = [
             "DROP AND GIVE ME CODE!",
             "I WANT TO SEE THOSE FINGERS ON THE KEYBOARD!",
@@ -696,6 +862,52 @@ class TuxDrillSergeant:
             "YOU'RE STRONGER THAN YOU THINK!",
         ]
         
+        # Emotion-based responses
+        self.emotion_responses = {
+            "exceptional": [
+                "🎖️ RECRUIT! I need to SALUTE YOU! This is EXCEPTIONAL work!",
+                "OUTSTANDING! You didn't just meet expectations - you CRUSHED them!",
+                "THIS is what EXCELLENCE looks like! You're not just a recruit anymore!",
+                "I've trained HUNDREDS of soldiers, and THIS... this is ELITE level!",
+                "PROMOTED! You've shown MASTERY beyond your rank! EXCEPTIONAL!",
+            ],
+            "proud": [
+                "OUTSTANDING WORK, RECRUIT! This is EXACTLY what I wanted to see!",
+                "NOW THAT'S WHAT I'M TALKING ABOUT! You're a NATURAL!",
+                "EXCEPTIONAL! You've got the HEART of a TRUE PROGRAMMER!",
+                "I'm PROUD of you, soldier! This is SUPERIOR work!",
+            ],
+            "satisfied": [
+                "GOOD JOB! You got it done and that's what matters!",
+                "SOLID WORK! You're making REAL progress here!",
+                "That's what I like to see! Keep this momentum going!",
+                "WELL DONE! You're proving yourself, recruit!",
+            ],
+            "encouraging": [
+                "You're ON THE RIGHT TRACK! Just needs some polish!",
+                "I see POTENTIAL here! Let's tighten this up!",
+                "GOOD EFFORT! You're getting there, keep pushing!",
+                "Not bad! But I KNOW you can do BETTER!",
+            ],
+            "stern": [
+                "This needs MORE WORK, recruit! I expect BETTER!",
+                "You're CAPABLE of more than this! DIG DEEPER!",
+                "UNACCEPTABLE! Get back in there and FIX THIS!",
+                "Is THIS your best? Because I DON'T BELIEVE IT!",
+            ],
+            "disappointed": [
+                "WHAT IS THIS?! Did you even TRY?!",
+                "I've seen BEGINNERS do better! GET IT TOGETHER!",
+                "This is LAZY WORK! You're BETTER than this!",
+                "RECRUIT! Drop and give me TWENTY LINES of PROPER CODE!",
+            ],
+            "confused": [
+                "What in the WORLD is going on here?!",
+                "I can't even BEGIN to understand this mess!",
+                "EXPLAIN YOURSELF, RECRUIT! What were you THINKING?!",
+            ]
+        }
+    
     def get_motivational_speech(self, context, language=None):
         """Generate context-aware motivational speeches"""
         speeches = {
@@ -725,9 +937,51 @@ class TuxDrillSergeant:
         phrases = speeches.get(context, self.favorite_expressions)
         return random.choice(phrases)
     
+    def get_emotional_response(self, emotion, analysis_data=None):
+        """Get Tux's response based on emotion and analysis"""
+        self.current_emotion = emotion
+        
+        base_response = random.choice(self.emotion_responses.get(emotion, self.favorite_expressions))
+        
+        if analysis_data and emotion in ["proud", "satisfied", "encouraging"]:
+            # Add positive reinforcement
+            if analysis_data.get("strengths"):
+                strengths = analysis_data["strengths"][:2]  # Top 2 strengths
+                base_response += f"\n\nWhat I LIKED:\n"
+                for strength in strengths:
+                    base_response += f"✓ {strength}\n"
+        
+        if analysis_data and emotion in ["stern", "disappointed", "encouraging"]:
+            # Add constructive criticism
+            if analysis_data.get("issues"):
+                issues = analysis_data["issues"][:3]  # Top 3 issues
+                base_response += f"\n\nWhat needs IMPROVEMENT:\n"
+                for issue in issues:
+                    base_response += f"✗ {issue}\n"
+        
+        if analysis_data and analysis_data.get("suggestions"):
+            base_response += f"\n\nYour MISSION:\n"
+            for i, suggestion in enumerate(analysis_data["suggestions"][:2], 1):
+                base_response += f"{i}. {suggestion}\n"
+        
+        return base_response
+    
     def get_random_expression(self):
         """Get a random drill sergeant expression"""
         return random.choice(self.favorite_expressions)
+    
+    def get_emotion_color(self):
+        """Get color code for current emotion"""
+        colors = {
+            "proud": "#00ff00",
+            "satisfied": "#90EE90",
+            "encouraging": "#ffd93d",
+            "stern": "#ff8c00",
+            "disappointed": "#ff0000",
+            "confused": "#9370db",
+            "neutral": "#ffffff"
+        }
+        return colors.get(self.current_emotion, "#ffffff")
 
 
 # =====================================================================
@@ -1136,6 +1390,18 @@ class MainInterface:
         )
         challenge_button.pack(side=tk.LEFT, padx=3)
         
+        submit_button = tk.Button(
+            button_frame,
+            text="SUBMIT CODE",
+            font=("Arial", 10, "bold"),
+            bg="#9370db",
+            fg="#ffffff",
+            command=self._submit_code,
+            padx=10,
+            pady=6
+        )
+        submit_button.pack(side=tk.LEFT, padx=3)
+        
         commit_button = tk.Button(
             button_frame,
             text="COMMIT",
@@ -1298,6 +1564,47 @@ class MainInterface:
         )
         challenge_window.show()
     
+    def _submit_code(self):
+        """Submit code for AI analysis"""
+        selected_language = self._get_selected_language()
+        if not selected_language:
+            messagebox.showwarning("TUX SAYS:", "SELECT A LANGUAGE FIRST!")
+            return
+        
+        # Open file dialog to select code file
+        from tkinter import filedialog
+        
+        filename = filedialog.askopenfilename(
+            title="SELECT YOUR CODE FILE",
+            initialdir="TuxBootCamp_Challenges",
+            filetypes=[
+                (f"{selected_language} files", f"*{ChallengeFileManager.EXTENSIONS.get(selected_language, '.txt')}"),
+                ("All files", "*.*")
+            ]
+        )
+        
+        if not filename:
+            return
+        
+        # Read the code
+        try:
+            with open(filename, 'r', encoding='utf-8') as f:
+                code_content = f.read()
+        except Exception as e:
+            messagebox.showerror("ERROR", f"Could not read file: {str(e)}")
+            return
+        
+        # Show submission window
+        submission_window = CodeSubmissionWindow(
+            self.root,
+            selected_language,
+            code_content,
+            self.student,
+            self.tux,
+            self._update_motivation_display
+        )
+        submission_window.show()
+    
     def _update_motivation_display(self):
         """Update motivation level display"""
         if self.motivation_label:
@@ -1452,6 +1759,233 @@ class ChallengeWindow:
         except Exception as e:
             messagebox.showerror("FILE CREATION ERROR", 
                                f"Couldn't create challenge file:\n{str(e)}")
+
+
+class CodeSubmissionWindow:
+    """Window for submitting and analyzing code"""
+    
+    def __init__(self, root, language, code_content, student, tux_sergeant, on_motivation_update):
+        self.root = root
+        self.language = language
+        self.code_content = code_content
+        self.student = student
+        self.tux = tux_sergeant
+        self.on_motivation_update = on_motivation_update
+        self.analyzer = CodeAnalyzer()
+        
+        # Extract challenge description from code comments
+        self.challenge_desc = self._extract_challenge_description()
+    
+    def _extract_challenge_description(self):
+        """Extract challenge description from code file"""
+        lines = self.code_content.split('\n')
+        for line in lines:
+            if 'MISSION BRIEFING:' in line:
+                # Find the next line after MISSION BRIEFING
+                idx = lines.index(line)
+                if idx + 1 < len(lines):
+                    desc_line = lines[idx + 1]
+                    # Remove comment markers
+                    desc_line = desc_line.replace('#', '').replace('//', '').replace(';', '').strip()
+                    return desc_line
+        return "Complete the coding challenge"
+    
+    def show(self):
+        """Display submission window"""
+        self.window = tk.Toplevel(self.root)
+        self.window.title(f"CODE SUBMISSION - {self.language}")
+        self.window.geometry("900x700")
+        self.window.configure(bg='#1a1a1a')
+        
+        frame = tk.Frame(self.window, bg='#1a1a1a')
+        frame.pack(fill=tk.BOTH, expand=True, padx=20, pady=20)
+        
+        self._create_header(frame)
+        self._create_code_display(frame)
+        self._create_analysis_section(frame)
+        self._create_submit_button(frame)
+    
+    def _create_header(self, parent):
+        """Create header"""
+        header = tk.Label(
+            parent,
+            text=f"SUBMIT YOUR {self.language.upper()} CODE",
+            font=("Arial", 16, "bold"),
+            fg="#ff6b6b",
+            bg="#1a1a1a"
+        )
+        header.pack(pady=10)
+    
+    def _create_code_display(self, parent):
+        """Create code display area"""
+        code_label = tk.Label(
+            parent,
+            text="YOUR CODE:",
+            font=("Arial", 11, "bold"),
+            fg="#00ff00",
+            bg="#1a1a1a"
+        )
+        code_label.pack(anchor=tk.W, pady=(10, 5))
+        
+        self.code_text = scrolledtext.ScrolledText(
+            parent,
+            height=15,
+            width=100,
+            font=("Courier", 9),
+            bg="#2b2b2b",
+            fg="#00ff00",
+            wrap=tk.WORD
+        )
+        self.code_text.pack(fill=tk.BOTH, expand=True, pady=5)
+        self.code_text.insert(tk.END, self.code_content)
+        self.code_text.config(state=tk.DISABLED)
+    
+    def _create_analysis_section(self, parent):
+        """Create analysis results section"""
+        analysis_label = tk.Label(
+            parent,
+            text="TUX'S ANALYSIS:",
+            font=("Arial", 11, "bold"),
+            fg="#ffd93d",
+            bg="#1a1a1a"
+        )
+        analysis_label.pack(anchor=tk.W, pady=(10, 5))
+        
+        self.analysis_text = scrolledtext.ScrolledText(
+            parent,
+            height=10,
+            width=100,
+            font=("Courier", 10),
+            bg="#2b2b2b",
+            fg="#ffffff",
+            wrap=tk.WORD
+        )
+        self.analysis_text.pack(fill=tk.BOTH, expand=True, pady=5)
+        self.analysis_text.insert(tk.END, "Waiting for submission...")
+        self.analysis_text.config(state=tk.DISABLED)
+    
+    def _create_submit_button(self, parent):
+        """Create submit button"""
+        button_frame = tk.Frame(parent, bg='#1a1a1a')
+        button_frame.pack(fill=tk.X, pady=10)
+        
+        self.submit_button = tk.Button(
+            button_frame,
+            text="SUBMIT FOR REVIEW!",
+            font=("Arial", 12, "bold"),
+            bg="#ff6b6b",
+            fg="#ffffff",
+            command=self._submit_code,
+            padx=20,
+            pady=10
+        )
+        self.submit_button.pack(side=tk.LEFT, padx=5)
+        
+        close_button = tk.Button(
+            button_frame,
+            text="Close",
+            font=("Arial", 10),
+            bg="#3b3b3b",
+            fg="#ffffff",
+            command=self.window.destroy,
+            padx=15,
+            pady=8
+        )
+        close_button.pack(side=tk.LEFT, padx=5)
+    
+    def _submit_code(self):
+        """Submit code for AI analysis"""
+        self.submit_button.config(state=tk.DISABLED, text="ANALYZING...")
+        self.analysis_text.config(state=tk.NORMAL)
+        self.analysis_text.delete(1.0, tk.END)
+        self.analysis_text.insert(tk.END, "Sergeant Tux is reviewing your code...\n\n")
+        self.analysis_text.config(state=tk.DISABLED)
+        
+        # Run analysis in background
+        import threading
+        thread = threading.Thread(target=self._run_analysis)
+        thread.daemon = True
+        thread.start()
+    
+    def _run_analysis(self):
+        """Run AI analysis in background thread"""
+        import asyncio
+        
+        # Create new event loop for this thread
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+        
+        try:
+            result = loop.run_until_complete(
+                self.analyzer.analyze_code(
+                    self.language,
+                    self.challenge_desc,
+                    self.code_content
+                )
+            )
+            
+            # Update UI in main thread
+            self.root.after(0, lambda: self._display_results(result))
+            
+        except Exception as e:
+            error_result = {
+                "success": False,
+                "tux_emotion": "confused",
+                "summary": f"Analysis failed: {str(e)}"
+            }
+            self.root.after(0, lambda: self._display_results(error_result))
+        finally:
+            loop.close()
+    
+    def _display_results(self, result):
+        """Display analysis results"""
+        emotion = result.get("tux_emotion", "neutral")
+        
+        # Get Tux's emotional response
+        tux_response = self.tux.get_emotional_response(emotion, result)
+        
+        # Update analysis text
+        self.analysis_text.config(state=tk.NORMAL)
+        self.analysis_text.delete(1.0, tk.END)
+        
+        # Add header with emotion color
+        emotion_color = self.tux.get_emotion_color()
+        self.analysis_text.tag_config("header", foreground=emotion_color, font=("Courier", 11, "bold"))
+        self.analysis_text.insert(tk.END, "=" * 80 + "\n", "header")
+        self.analysis_text.insert(tk.END, f"SERGEANT TUX'S VERDICT\n", "header")
+        self.analysis_text.insert(tk.END, "=" * 80 + "\n\n", "header")
+        
+        # Add Tux's response
+        self.analysis_text.insert(tk.END, tux_response + "\n\n")
+        
+        # Add technical details
+        if result.get("success"):
+            self.analysis_text.insert(tk.END, "=" * 80 + "\n")
+            self.analysis_text.insert(tk.END, "TECHNICAL ANALYSIS:\n")
+            self.analysis_text.insert(tk.END, "=" * 80 + "\n\n")
+            
+            self.analysis_text.insert(tk.END, f"Correctness: {'✓ CORRECT' if result.get('correct') else '✗ INCORRECT'}\n")
+            self.analysis_text.insert(tk.END, f"Completeness: {result.get('completeness', 0)}%\n")
+            self.analysis_text.insert(tk.END, f"Quality Score: {result.get('quality_score', 0)}%\n\n")
+            
+            if result.get('summary'):
+                self.analysis_text.insert(tk.END, f"Summary: {result['summary']}\n")
+        
+        self.analysis_text.config(state=tk.DISABLED)
+        
+        # Update motivation based on result
+        if result.get("correct"):
+            motivation_change = 20
+        elif result.get("completeness", 0) >= 50:
+            motivation_change = 10
+        else:
+            motivation_change = -5
+        
+        self.student.update_motivation(motivation_change)
+        self.on_motivation_update()
+        
+        # Re-enable submit button
+        self.submit_button.config(state=tk.NORMAL, text="SUBMIT FOR REVIEW!")
 
 
 # =====================================================================
