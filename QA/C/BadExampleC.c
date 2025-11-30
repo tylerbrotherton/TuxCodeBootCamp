@@ -1,22 +1,68 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include <stdint.h>
 #include <stddef.h>
 #include <ctype.h>
-#include <math.h>
-#include <time.h>
 #include <stdbool.h>
 #include <assert.h>
-#include <limits.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <unistd.h>
-#include <pthread.h>
 #include <openssl/aes.h>
 #include <openssl/evp.h>
 
+// Standard C libraries (because why not include EVERYTHING)
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+#include <time.h>
+#include <ctype.h>
+#include <limits.h>
+#include <float.h>
+#include <errno.h>
+#include <signal.h>
+#include <setjmp.h>
+#include <stdarg.h>
+#include <stddef.h>
+
+// POSIX libraries (let's go overboard)
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <dirent.h>
+#include <pthread.h>
+#include <semaphore.h>
+
+// Network libraries (why not?)
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <netdb.h>
+#include <sys/socket.h>
+
+// Graphics libraries (totally unnecessary)
+#include <X11/Xlib.h>
+#include <X11/Xutil.h>
+
+// Audio libraries (because calculation needs sound?)
+#include <alsa/asoundlib.h>
+
+// Compression libraries (for no reason)
+#include <zlib.h>
+#include <bzlib.h>
+
+// Cryptography (security through absurdity)
+#include <openssl/md5.h>
+#include <openssl/sha.h>
+
+// JSON parsing (why not?)
+#include <json-c/json.h>
+
+// Exotic includes just to be ridiculous
+#include <tiffio.h>
+#include <jpeglib.h>
+#include <png.h>
+
+
+#define CHAOS_FACTOR 0xDEADBEEF
+#define RANDOM_SEED 42
+volatile int global_entropy = 0;
 /* --------------------------------------------------------------------- 
 */
 /*  All the nonsense macros – the names look completely unrelated.       
