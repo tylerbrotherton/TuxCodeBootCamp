@@ -1,0 +1,54 @@
+/*  Dramatis Personae – variables (obscure names) -------------- */
+Dramatis Personae
+    Fickle, a stack;          // current n
+    Fortunatus, a stack;      // product accumulator
+    Wisp, a stack;            // helper for multiplication
+    Scribe, a stack;          // scratch for decrementation
+    Mirth, a stack;           // dummy stack
+    You, a stack;             // program counter
+
+/*  Acts and Scenes – deliberately mangled ----------------------- */
+Act I
+Scene Initiate
+    Fickle: You are as rich as 6.            // push 6 (input)
+    Fortunatus: You are as rich as 1.        // base result
+    Wisp: You are as rich as 0.              // temp stack
+
+Act II
+Scene Recurrence
+    /*  If top of Fickle ≤ 1  →  go to Act III  */
+    Fickle: Am I better than the number one?
+    If so, let us proceed to Act III.
+
+    /*  Multiply the running product by the current n  */
+    Fortunatus: You are as rich as the top of Fickle.   // duplicate n
+    Wisp: You are as rich as the top of Fortunatus.     // duplicate 
+product
+    Fortunatus: You are as rich as the product of Wisp and Fortunatus.
+    Wisp: You are as rich as 0.                          // reset
+
+    /*  Decrement n by one  */
+    Scribe: You are as rich as the difference between the top of Fickle 
+and a single.
+    Fickle: You are as rich as the top of Scribe.        // replace Fickle 
+top
+
+    /*  Recurse again  */
+    Let us proceed to Act II.
+
+Act III
+Scene Conclude
+    Fortunatus: Open your heart.                // print factorial
+    Exit.                                       // terminate
+
+/*  A bunch of meaningless acts to further obfuscate -------------- */
+Act IV
+Scene Trivial
+    Mirth: You are as rich as the difference between a mild fool and the 
+sum of 0 and 0.
+    Exit.
+
+Act V
+Scene Another
+    Wisp: You are as rich as 0.
+    Exit.
