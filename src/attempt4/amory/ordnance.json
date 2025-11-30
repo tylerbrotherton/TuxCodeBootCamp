@@ -1,0 +1,542 @@
+{
+  "Python": {
+    "description": "High-level, interpreted language known for readability and versatility.",
+    "difficulty": "Beginner",
+    "drill_sergeant_take": "PERFECT for BEGINNERS! Easy to READ but don't let that make you LAZY!",
+    "use_cases": [
+      "Web Development",
+      "Data Science",
+      "AI/ML"
+    ],
+    "sample_code": "print('Hello, Tux!')\ndef greet(name):\n    return f'Welcome, {name}!'",
+    "learning_resources": [
+      "https://docs.python.org/3/tutorial/",
+      "https://www.codecademy.com/learn/learn-python-3"
+    ]
+  },
+  "JavaScript": {
+    "description": "The language of the WEB! If you want to make things MOVE, this is IT!",
+    "difficulty": "Beginner-Intermediate",
+    "drill_sergeant_take": "JavaScript is EVERYWHERE! Master this and you can CONQUER the web!",
+    "use_cases": [
+      "Web Development",
+      "Frontend",
+      "Full Stack"
+    ],
+    "sample_code": "console.log('Hello, Tux!');\nfunction greet(name) {\n    return `Welcome, ${name}!`;\n}",
+    "learning_resources": [
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide",
+      "https://www.codecademy.com/learn/learn-javascript"
+    ]
+  },
+  "Go": {
+    "description": "Concurrent programming language developed by Google.",
+    "difficulty": "Intermediate",
+    "drill_sergeant_take": "Go is LEAN, MEAN, and gets the JOB DONE! Learn this and you're UNSTOPPABLE!",
+    "use_cases": [
+      "Cloud Computing",
+      "Network Programming",
+      "Microservices"
+    ],
+    "sample_code": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    fmt.Println(\"Hello, Tux!\")\n}",
+    "learning_resources": [
+      "https://go.dev/",
+      "https://www.freecodecamp.org/news/learn-golang-handbook/"
+    ]
+  },
+  "Rust": {
+    "description": "Systems programming language focused on memory safety and concurrency.",
+    "difficulty": "Advanced",
+    "drill_sergeant_take": "RUST is for SOLDIERS! The COMPILER will YELL at you just like I do!",
+    "use_cases": [
+      "Systems Programming",
+      "WebAssembly",
+      "Network Services"
+    ],
+    "sample_code": "fn main() {\n    println!(\"Hello, Tux!\");\n    let greeting = String::from(\"Rust is awesome\");\n}",
+    "learning_resources": [
+      "https://doc.rust-lang.org/book/",
+      "https://rustlings.cool/"
+    ]
+  },
+  "C": {
+    "description": "Low-level systems programming language with direct hardware access.",
+    "difficulty": "Advanced",
+    "drill_sergeant_take": "C is the FOUNDATION! Learn this and you'll understand EVERYTHING!",
+    "use_cases": [
+      "Operating Systems",
+      "Embedded Systems",
+      "Performance-critical Applications"
+    ],
+    "sample_code": "#include <stdio.h>\n\nint main() {\n    printf(\"Hello, Tux!\\n\");\n    return 0;\n}",
+    "learning_resources": [
+      "https://www.learn-c.org/",
+      "https://cplusplus.com/doc/tutorial/"
+    ]
+  },
+  "C++": {
+    "description": "Object-oriented systems programming language with high performance.",
+    "difficulty": "Advanced",
+    "drill_sergeant_take": "C++ is the ADVANCED TRAINING! You ready for this?!",
+    "use_cases": [
+      "Game Development",
+      "High-Performance Applications",
+      "System Software"
+    ],
+    "sample_code": "#include <iostream>\nint main() {\n    std::cout << \"Hello, Tux!\" << std::endl;\n    return 0;\n}",
+    "learning_resources": [
+      "https://www.learncpp.com/",
+      "https://www.cplusplus.com/doc/tutorial/"
+    ]
+  },
+  "Assembly": {
+    "description": "Low-level language that directly corresponds to machine instructions.",
+    "difficulty": "Expert",
+    "drill_sergeant_take": "ASSEMBLY is for the ELITE SOLDIERS! This is where the REAL WORK gets done!",
+    "use_cases": [
+      "Compiler Design",
+      "Embedded Systems",
+      "Reverse Engineering"
+    ],
+    "sample_code": "section .data\n    msg db 'Hello, Tux!', 0\nsection .text\n    global _start\n_start:\n    mov eax, 1\n    mov ebx, 0",
+    "learning_resources": [
+      "https://www.cs.virginia.edu/~evans/cs216/guides/x86.html",
+      "https://www.assemblylanguagetuts.com/"
+    ]
+  },
+  "C#": {
+    "description": "Microsoft's object-oriented language for .NET ecosystem.",
+    "difficulty": "Intermediate",
+    "drill_sergeant_take": "C# is POWERFUL and MODERN! Microsoft BUILT this for PROFESSIONALS!",
+    "use_cases": [
+      "Windows Applications",
+      "Game Development",
+      "Enterprise Software"
+    ],
+    "sample_code": "using System;\n\nclass TuxProgram {\n    static void Main() {\n        Console.WriteLine(\"Hello, Tux!\");\n    }\n}",
+    "learning_resources": [
+      "https://docs.microsoft.com/en-us/dotnet/csharp/",
+      "https://www.codecademy.com/learn/learn-c-sharp"
+    ]
+  },
+  "LOLCODE": {
+    "description": "Esoteric programming language based on LOLcat internet meme.",
+    "difficulty": "Novelty",
+    "drill_sergeant_take": "LOLCODE is UNCONVENTIONAL! It teaches you to THINK DIFFERENT and HAVE FUN!",
+    "use_cases": [
+      "Humor",
+      "Esoteric Programming",
+      "Creative Coding"
+    ],
+    "sample_code": "HAI 1.2\n    CAN HAS STDIO?\n    VISIBLE \"HELLO TUX!\"\n    KTHXBYE",
+    "learning_resources": [
+      "https://en.wikipedia.org/wiki/LOLCODE",
+      "https://github.com/justinmeza/lolcode-spec"
+    ]
+  },
+  "Holy C": {
+    "description": "Programming language created by Terry A. Davis for TempleOS.",
+    "difficulty": "Unique",
+    "drill_sergeant_take": "Holy C is EXPERIMENTAL! It's for the VISIONARIES willing to explore!",
+    "use_cases": [
+      "TempleOS Operating System",
+      "Experimental Computing",
+      "System Design"
+    ],
+    "sample_code": "void main() {\n    Print(\"Hello, Tux!\");\n}",
+    "learning_resources": [
+      "https://www.templeos.org",
+      "https://en.wikipedia.org/wiki/TempleOS"
+    ]
+  },
+  "INTERCAL": {
+    "description": "Intentionally Complicated programming language designed to be absurd.",
+    "difficulty": "Deliberately Difficult",
+    "drill_sergeant_take": "INTERCAL is a CHALLENGE like no other! MASTER this and you can MASTER anything!",
+    "use_cases": [
+      "Humor",
+      "Esoteric Programming Challenge",
+      "Mental Exercise"
+    ],
+    "sample_code": "DO ,1 <- #1\nPLEASE DO ,1 SUB #1 <- #1\nPLEASE DO ,1 SUB #2 <- #0\nDO COME FROM ,1",
+    "learning_resources": [
+      "https://www.muppetlabs.com/~breadbox/intercal/",
+      "https://en.wikipedia.org/wiki/INTERCAL"
+    ]
+  },
+  "Shakespeare": {
+    "description": "Esoteric programming language that looks like a Shakespearean play.",
+    "difficulty": "Artistic Challenge",
+    "drill_sergeant_take": "SHAKESPEARE is ART meets CODE! Show me your CREATIVITY, recruit!",
+    "use_cases": [
+      "Artistic Programming",
+      "Coding Creativity",
+      "Theatrical Expression"
+    ],
+    "sample_code": "Romeo, a young programmer.\nJuliet, a beautiful variable.\n\nRomeo: Thou art the sum of a proud strong lord!",
+    "learning_resources": [
+      "https://shakespearelang.sourceforge.net/",
+      "https://en.wikipedia.org/wiki/Shakespeare_Programming_Language"
+    ]
+  },
+  "Rockstar": {
+    "description": "Programming language designed to look like song lyrics.",
+    "difficulty": "Creative",
+    "drill_sergeant_take": "ROCKSTAR is MUSIC meets CODE! If you can COMPOSE, you can PROGRAM!",
+    "use_cases": [
+      "Artistic Coding",
+      "Programmer Humor",
+      "Musical Expression"
+    ],
+    "sample_code": "Rock on, my heart!\nShout it out loud!\nRock on is as loud as the fire\nFire is 100",
+    "learning_resources": [
+      "https://github.com/RockstarLang/rockstar",
+      "https://esolangs.org/wiki/Rockstar"
+    ]
+  },
+  "Perl": {
+    "description": "High-level, general-purpose language known for text processing and system administration.",
+    "difficulty": "Intermediate",
+    "drill_sergeant_take": "PERL is the SWISS ARMY KNIFE of programming! There's MORE THAN ONE WAY to win!",
+    "use_cases": [
+      "Text Processing",
+      "System Administration",
+      "Web Development"
+    ],
+    "sample_code": "#!/usr/bin/perl\nuse strict;\nuse warnings;\n\nprint \"Hello, Tux!\\n\";\n\nsub greet {\n    my $name = shift;\n    return \"Welcome, $name!\";\n}",
+    "learning_resources": [
+      "https://www.perl.org/learn.html",
+      "https://perldoc.perl.org/perlintro"
+    ]
+  },
+  "PHP": {
+    "description": "Server-side scripting language designed for web development.",
+    "difficulty": "Beginner-Intermediate",
+    "drill_sergeant_take": "PHP POWERS the WEB! It's BATTLE-TESTED and READY for deployment!",
+    "use_cases": [
+      "Web Development",
+      "Server-Side Scripting",
+      "CMS Development"
+    ],
+    "sample_code": "<?php\necho \"Hello, Tux!\\n\";\n\nfunction greet($name) {\n    return \"Welcome, $name!\";\n}\n?>",
+    "learning_resources": [
+      "https://www.php.net/manual/en/getting-started.php",
+      "https://www.codecademy.com/learn/learn-php"
+    ]
+  },
+  "Ruby": {
+    "description": "Dynamic, object-oriented language designed for programmer happiness.",
+    "difficulty": "Beginner-Intermediate",
+    "drill_sergeant_take": "RUBY makes coding ELEGANT! But don't let BEAUTY distract from PERFORMANCE!",
+    "use_cases": [
+      "Web Development",
+      "Scripting",
+      "Automation"
+    ],
+    "sample_code": "puts 'Hello, Tux!'\n\ndef greet(name)\n  \"Welcome, #{name}!\"\nend",
+    "learning_resources": [
+      "https://www.ruby-lang.org/en/documentation/",
+      "https://www.codecademy.com/learn/learn-ruby"
+    ]
+  },
+  "Kotlin": {
+    "description": "Modern, concise language fully interoperable with Java.",
+    "difficulty": "Intermediate",
+    "drill_sergeant_take": "KOTLIN is JAVA 2.0! MODERN, SAFE, and ready for ANDROID WARFARE!",
+    "use_cases": [
+      "Android Development",
+      "Server-Side",
+      "Multiplatform"
+    ],
+    "sample_code": "fun main() {\n    println(\"Hello, Tux!\")\n}\n\nfun greet(name: String): String {\n    return \"Welcome, $name!\"\n}",
+    "learning_resources": [
+      "https://kotlinlang.org/docs/getting-started.html",
+      "https://developer.android.com/kotlin"
+    ]
+  },
+  "MATLAB": {
+    "description": "High-performance language for numerical computing and visualization.",
+    "difficulty": "Intermediate",
+    "drill_sergeant_take": "MATLAB is for ENGINEERS! CALCULATE, VISUALIZE, and DOMINATE the numbers!",
+    "use_cases": [
+      "Scientific Computing",
+      "Data Analysis",
+      "Engineering"
+    ],
+    "sample_code": "disp('Hello, Tux!')\n\nfunction result = greet(name)\n    result = sprintf('Welcome, %s!', name);\nend",
+    "learning_resources": [
+      "https://www.mathworks.com/learn/tutorials/matlab-onramp.html",
+      "https://www.mathworks.com/help/matlab/getting-started-with-matlab.html"
+    ]
+  },
+  "Visual Basic": {
+    "description": "Event-driven programming language from Microsoft.",
+    "difficulty": "Beginner",
+    "drill_sergeant_take": "VISUAL BASIC is CLASSIC! Old school doesn't mean WEAK, soldier!",
+    "use_cases": [
+      "Windows Applications",
+      "Office Automation",
+      "Legacy Systems"
+    ],
+    "sample_code": "Module TuxProgram\n    Sub Main()\n        Console.WriteLine(\"Hello, Tux!\")\n    End Sub\n    \n    Function Greet(name As String) As String\n        Return \"Welcome, \" & name & \"!\"\n    End Function\nEnd Module",
+    "learning_resources": [
+      "https://docs.microsoft.com/en-us/dotnet/visual-basic/",
+      "https://www.tutorialspoint.com/vb.net/index.htm"
+    ]
+  },
+  "R": {
+    "description": "Language for statistical computing and graphics.",
+    "difficulty": "Intermediate",
+    "drill_sergeant_take": "R is for STATISTICIANS! Master the DATA and you master the BATTLEFIELD!",
+    "use_cases": [
+      "Statistical Analysis",
+      "Data Science",
+      "Machine Learning"
+    ],
+    "sample_code": "print('Hello, Tux!')\n\ngreet <- function(name) {\n  paste('Welcome,', name, '!')\n}",
+    "learning_resources": [
+      "https://www.r-project.org/",
+      "https://www.codecademy.com/learn/learn-r"
+    ]
+  },
+  "Swift": {
+    "description": "Powerful and intuitive programming language for iOS and macOS.",
+    "difficulty": "Intermediate",
+    "drill_sergeant_take": "SWIFT is APPLE'S WEAPON! Fast, safe, and ready for iOS DEPLOYMENT!",
+    "use_cases": [
+      "iOS Development",
+      "macOS Development",
+      "Server-Side"
+    ],
+    "sample_code": "print(\"Hello, Tux!\")\n\nfunc greet(name: String) -> String {\n    return \"Welcome, \\(name)!\"\n}",
+    "learning_resources": [
+      "https://www.swift.org/getting-started/",
+      "https://developer.apple.com/swift/"
+    ]
+  },
+  "COBOL": {
+    "description": "Business-oriented language still powering critical financial systems.",
+    "difficulty": "Intermediate",
+    "drill_sergeant_take": "COBOL is a VETERAN! It's STILL FIGHTING after 60+ years! Show RESPECT!",
+    "use_cases": [
+      "Banking Systems",
+      "Insurance",
+      "Legacy Business Applications"
+    ],
+    "sample_code": "IDENTIFICATION DIVISION.\nPROGRAM-ID. TuxProgram.\nPROCEDURE DIVISION.\n    DISPLAY 'Hello, Tux!'.\n    STOP RUN.",
+    "learning_resources": [
+      "https://gnucobol.sourceforge.io/",
+      "https://www.tutorialspoint.com/cobol/index.htm"
+    ]
+  },
+  "Fortran": {
+    "description": "First high-level language, optimized for numerical and scientific computing.",
+    "difficulty": "Intermediate-Advanced",
+    "drill_sergeant_take": "FORTRAN is the ORIGINAL! The GRANDFATHER of all high-level languages!",
+    "use_cases": [
+      "Scientific Computing",
+      "High-Performance Computing",
+      "Numerical Analysis"
+    ],
+    "sample_code": "program TuxProgram\n    implicit none\n    print *, 'Hello, Tux!'\nend program TuxProgram",
+    "learning_resources": [
+      "https://fortran-lang.org/learn/",
+      "https://www.tutorialspoint.com/fortran/index.htm"
+    ]
+  },
+  "Modern Fortran": {
+    "description": "Modern version of Fortran with object-oriented and parallel programming features.",
+    "difficulty": "Advanced",
+    "drill_sergeant_take": "MODERN FORTRAN combines OLD POWER with NEW TACTICS! The best of BOTH worlds!",
+    "use_cases": [
+      "Supercomputing",
+      "Climate Modeling",
+      "Computational Physics"
+    ],
+    "sample_code": "program TuxModern\n    use iso_fortran_env\n    implicit none\n    \n    print *, 'Hello, Tux!'\n    \ncontains\n    function greet(name) result(msg)\n        character(len=*), intent(in) :: name\n        character(len=100) :: msg\n        msg = 'Welcome, ' // trim(name) // '!'\n    end function\nend program",
+    "learning_resources": [
+      "https://fortran-lang.org/",
+      "https://www.manning.com/books/modern-fortran"
+    ]
+  },
+  "Bash": {
+    "description": "Unix shell and command language for system automation.",
+    "difficulty": "Beginner-Intermediate",
+    "drill_sergeant_take": "BASH is your COMMAND LINE WEAPON! Master the SHELL, control the SYSTEM!",
+    "use_cases": [
+      "System Administration",
+      "Automation",
+      "DevOps"
+    ],
+    "sample_code": "#!/bin/bash\n\necho \"Hello, Tux!\"\n\ngreet() {\n    local name=$1\n    echo \"Welcome, $name!\"\n}",
+    "learning_resources": [
+      "https://www.gnu.org/software/bash/manual/",
+      "https://www.shellscript.sh/"
+    ]
+  },
+  "Lisp": {
+    "description": "Second-oldest high-level language, known for AI and symbolic computation.",
+    "difficulty": "Advanced",
+    "drill_sergeant_take": "LISP teaches you to THINK DIFFERENTLY! Embrace the PARENTHESES, soldier!",
+    "use_cases": [
+      "Artificial Intelligence",
+      "Symbolic Computation",
+      "Language Research"
+    ],
+    "sample_code": "(print \"Hello, Tux!\")\n\n(defun greet (name)\n  (format nil \"Welcome, ~a!\" name))",
+    "learning_resources": [
+      "https://lisp-lang.org/learn/",
+      "https://www.cs.cmu.edu/~dst/LispBook/"
+    ]
+  },
+  "F#": {
+    "description": "Functional-first language for .NET with strong type inference.",
+    "difficulty": "Intermediate-Advanced",
+    "drill_sergeant_take": "F# is FUNCTIONAL FIREPOWER! Think in FUNCTIONS, execute with PRECISION!",
+    "use_cases": [
+      "Data Science",
+      "Web Development",
+      "Financial Computing"
+    ],
+    "sample_code": "printfn \"Hello, Tux!\"\n\nlet greet name =\n    sprintf \"Welcome, %s!\" name",
+    "learning_resources": [
+      "https://fsharp.org/learn/",
+      "https://docs.microsoft.com/en-us/dotnet/fsharp/"
+    ]
+  },
+  "Zig": {
+    "description": "Modern systems programming language focusing on robustness and optimization.",
+    "difficulty": "Advanced",
+    "drill_sergeant_take": "ZIG is the NEW SOLDIER on the block! FAST, SAFE, and ready for BATTLE!",
+    "use_cases": [
+      "Systems Programming",
+      "Game Development",
+      "Embedded Systems"
+    ],
+    "sample_code": "const std = @import(\"std\");\n\npub fn main() !void {\n    const stdout = std.io.getStdOut().writer();\n    try stdout.print(\"Hello, Tux!\\n\", .{});\n}",
+    "learning_resources": [
+      "https://ziglang.org/learn/",
+      "https://ziglearn.org/"
+    ]
+  },
+  "D": {
+    "description": "Systems programming language with C-like performance and modern features.",
+    "difficulty": "Intermediate-Advanced",
+    "drill_sergeant_take": "D is C++ EVOLVED! All the POWER, less of the PAIN!",
+    "use_cases": [
+      "Systems Programming",
+      "Game Development",
+      "High-Performance Applications"
+    ],
+    "sample_code": "import std.stdio;\n\nvoid main() {\n    writeln(\"Hello, Tux!\");\n}\n\nstring greet(string name) {\n    return \"Welcome, \" ~ name ~ \"!\";\n}",
+    "learning_resources": [
+      "https://dlang.org/getstarted.html",
+      "https://tour.dlang.org/"
+    ]
+  },
+  "Haskell": {
+    "description": "Pure functional programming language with strong static typing.",
+    "difficulty": "Advanced",
+    "drill_sergeant_take": "HASKELL is PURE FUNCTIONAL! No side effects, just MATHEMATICAL PRECISION!",
+    "use_cases": [
+      "Compilers",
+      "Financial Systems",
+      "Research"
+    ],
+    "sample_code": "main :: IO ()\nmain = putStrLn \"Hello, Tux!\"\n\ngreet :: String -> String\ngreet name = \"Welcome, \" ++ name ++ \"!\"",
+    "learning_resources": [
+      "http://learnyouahaskell.com/",
+      "https://www.haskell.org/documentation/"
+    ]
+  },
+  "Scala": {
+    "description": "Multi-paradigm language combining object-oriented and functional programming.",
+    "difficulty": "Intermediate-Advanced",
+    "drill_sergeant_take": "SCALA is VERSATILE! OOP meets FUNCTIONAL - use the RIGHT tool for the MISSION!",
+    "use_cases": [
+      "Big Data",
+      "Web Development",
+      "Distributed Systems"
+    ],
+    "sample_code": "object TuxProgram {\n  def main(args: Array[String]): Unit = {\n    println(\"Hello, Tux!\")\n  }\n  \n  def greet(name: String): String = {\n    s\"Welcome, $name!\"\n  }\n}",
+    "learning_resources": [
+      "https://docs.scala-lang.org/getting-started/",
+      "https://www.scala-exercises.org/"
+    ]
+  },
+  "Elixir": {
+    "description": "Functional language built on Erlang VM for distributed, fault-tolerant systems.",
+    "difficulty": "Intermediate",
+    "drill_sergeant_take": "ELIXIR is BULLETPROOF! Built for systems that NEVER go down!",
+    "use_cases": [
+      "Web Development",
+      "Distributed Systems",
+      "Real-time Applications"
+    ],
+    "sample_code": "IO.puts \"Hello, Tux!\"\n\ndefmodule Greeter do\n  def greet(name) do\n    \"Welcome, #{name}!\"\n  end\nend",
+    "learning_resources": [
+      "https://elixir-lang.org/getting-started/introduction.html",
+      "https://exercism.org/tracks/elixir"
+    ]
+  },
+  "Dart": {
+    "description": "Client-optimized language for fast apps on any platform.",
+    "difficulty": "Beginner-Intermediate",
+    "drill_sergeant_take": "DART powers FLUTTER! Build once, DEPLOY everywhere! That's EFFICIENCY!",
+    "use_cases": [
+      "Mobile Development",
+      "Web Development",
+      "Desktop Applications"
+    ],
+    "sample_code": "void main() {\n  print('Hello, Tux!');\n}\n\nString greet(String name) {\n  return 'Welcome, $name!';\n}",
+    "learning_resources": [
+      "https://dart.dev/guides",
+      "https://flutter.dev/learn"
+    ]
+  },
+  "Lua": {
+    "description": "Lightweight, embeddable scripting language.",
+    "difficulty": "Beginner",
+    "drill_sergeant_take": "LUA is LIGHTWEIGHT but POWERFUL! Perfect for EMBEDDING in your operations!",
+    "use_cases": [
+      "Game Development",
+      "Embedded Systems",
+      "Configuration"
+    ],
+    "sample_code": "print(\"Hello, Tux!\")\n\nfunction greet(name)\n    return \"Welcome, \" .. name .. \"!\"\nend",
+    "learning_resources": [
+      "https://www.lua.org/manual/5.4/",
+      "https://www.codecademy.com/learn/learn-lua"
+    ]
+  },
+  "Julia": {
+    "description": "High-performance language for technical computing.",
+    "difficulty": "Intermediate",
+    "drill_sergeant_take": "JULIA is FAST like C but EASY like Python! The BEST of both worlds!",
+    "use_cases": [
+      "Scientific Computing",
+      "Machine Learning",
+      "Data Science"
+    ],
+    "sample_code": "println(\"Hello, Tux!\")\n\nfunction greet(name)\n    return \"Welcome, $name!\"\nend",
+    "learning_resources": [
+      "https://julialang.org/learning/",
+      "https://docs.julialang.org/en/v1/"
+    ]
+  },
+  "Nim": {
+    "description": "Statically typed language combining Python-like syntax with C-like performance.",
+    "difficulty": "Intermediate",
+    "drill_sergeant_take": "NIM is ELEGANT and EFFICIENT! Python's READABILITY with C's SPEED!",
+    "use_cases": [
+      "Systems Programming",
+      "Game Development",
+      "Web Development"
+    ],
+    "sample_code": "echo \"Hello, Tux!\"\n\nproc greet(name: string): string =\n  result = \"Welcome, \" & name & \"!\"",
+    "learning_resources": [
+      "https://nim-lang.org/learn.html",
+      "https://nim-by-example.github.io/"
+    ]
+  }
+}

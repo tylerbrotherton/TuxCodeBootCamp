@@ -1,0 +1,244 @@
+{
+  "file_extensions": {
+    "Python": ".py",
+    "JavaScript": ".js",
+    "Go": ".go",
+    "Rust": ".rs",
+    "C": ".c",
+    "C++": ".cpp",
+    "Assembly": ".asm",
+    "C#": ".cs",
+    "LOLCODE": ".lol",
+    "Holy C": ".hc",
+    "INTERCAL": ".i",
+    "Shakespeare": ".spl",
+    "Rockstar": ".rock",
+    "Perl": ".pl",
+    "PHP": ".php",
+    "Ruby": ".rb",
+    "Kotlin": ".kt",
+    "MATLAB": ".m",
+    "Visual Basic": ".vb",
+    "R": ".r",
+    "Swift": ".swift",
+    "COBOL": ".cob",
+    "Fortran": ".f90",
+    "Modern Fortran": ".f90",
+    "Bash": ".sh",
+    "Lisp": ".lisp",
+    "F#": ".fs",
+    "Zig": ".zig",
+    "D": ".d",
+    "Haskell": ".hs",
+    "Scala": ".scala",
+    "Elixir": ".ex",
+    "Dart": ".dart",
+    "Lua": ".lua",
+    "Julia": ".jl",
+    "Nim": ".nim"
+  },
+  "comment_styles": {
+    "Python": {
+      "start": "#",
+      "end": "#"
+    },
+    "JavaScript": {
+      "start": "//",
+      "end": "//"
+    },
+    "Go": {
+      "start": "//",
+      "end": "//"
+    },
+    "Rust": {
+      "start": "//",
+      "end": "//"
+    },
+    "C": {
+      "start": "//",
+      "end": "//"
+    },
+    "C++": {
+      "start": "//",
+      "end": "//"
+    },
+    "Assembly": {
+      "start": ";",
+      "end": ";"
+    },
+    "C#": {
+      "start": "//",
+      "end": "//"
+    },
+    "LOLCODE": {
+      "start": "BTW",
+      "end": "BTW"
+    },
+    "Holy C": {
+      "start": "//",
+      "end": "//"
+    },
+    "INTERCAL": {
+      "start": "NOTE",
+      "end": "NOTE"
+    },
+    "Shakespeare": {
+      "start": "",
+      "end": ""
+    },
+    "Rockstar": {
+      "start": "(",
+      "end": ")"
+    },
+    "Perl": {
+      "start": "#",
+      "end": "#"
+    },
+    "PHP": {
+      "start": "//",
+      "end": "//"
+    },
+    "Ruby": {
+      "start": "#",
+      "end": "#"
+    },
+    "Kotlin": {
+      "start": "//",
+      "end": "//"
+    },
+    "MATLAB": {
+      "start": "%",
+      "end": "%"
+    },
+    "Visual Basic": {
+      "start": "'",
+      "end": "'"
+    },
+    "R": {
+      "start": "#",
+      "end": "#"
+    },
+    "Swift": {
+      "start": "//",
+      "end": "//"
+    },
+    "COBOL": {
+      "start": "*>",
+      "end": "*>"
+    },
+    "Fortran": {
+      "start": "!",
+      "end": "!"
+    },
+    "Modern Fortran": {
+      "start": "!",
+      "end": "!"
+    },
+    "Bash": {
+      "start": "#",
+      "end": "#"
+    },
+    "Lisp": {
+      "start": ";",
+      "end": ";"
+    },
+    "F#": {
+      "start": "//",
+      "end": "//"
+    },
+    "Zig": {
+      "start": "//",
+      "end": "//"
+    },
+    "D": {
+      "start": "//",
+      "end": "//"
+    },
+    "Haskell": {
+      "start": "--",
+      "end": "--"
+    },
+    "Scala": {
+      "start": "//",
+      "end": "//"
+    },
+    "Elixir": {
+      "start": "#",
+      "end": "#"
+    },
+    "Dart": {
+      "start": "//",
+      "end": "//"
+    },
+    "Lua": {
+      "start": "--",
+      "end": "--"
+    },
+    "Julia": {
+      "start": "#",
+      "end": "#"
+    },
+    "Nim": {
+      "start": "#",
+      "end": "#"
+    }
+  },
+  "header_lines": {
+    "separator": "======================================================================",
+    "title": "TUX CODE BOOT CAMP - CHALLENGE FILE",
+    "fields": {
+      "recruit": "Recruit: {student}",
+      "challenge": "Challenge: {challenge}",
+      "language": "Language: {language}",
+      "difficulty": "Difficulty: {difficulty}",
+      "date": "Date: {date}"
+    },
+    "mission_briefing_header": "MISSION BRIEFING:",
+    "orders_header": "YOUR ORDERS:",
+    "orders": [
+      "1. Read the mission briefing carefully",
+      "2. Complete the function implementation below",
+      "3. Test your code thoroughly",
+      "4. Report back to Sergeant Tux when complete!"
+    ],
+    "reminder": "REMEMBER: Comments are your BATTLE PLAN! Use them!"
+  },
+  "language_templates": {
+    "Python": "\ndef main():\n    \"\"\"\n    Main function - This is where your code execution begins!\n    Purpose: Implement the challenge requirements here\n    \"\"\"\n    # TODO: Write your code here, recruit!\n    pass\n\n\ndef helper_function():\n    \"\"\"\n    Helper function - Break down complex problems into smaller pieces!\n    Purpose: Add any helper functions you need\n    \"\"\"\n    # TODO: Implement helper logic\n    pass\n\n\nif __name__ == \"__main__\":\n    main()\n\n# SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "JavaScript": "\n// Main function - This is your entry point!\n// Purpose: Implement the challenge requirements here\nfunction main() {\n    // TODO: Write your code here, recruit!\n    \n}\n\n// Helper function - Break it down into manageable pieces!\n// Purpose: Add any helper functions you need\nfunction helperFunction() {\n    // TODO: Implement helper logic\n    \n}\n\n// Execute main function\nmain();\n\n// SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "Go": "\npackage main\n\nimport \"fmt\"\n\n// main - This is your entry point!\n// Purpose: Implement the challenge requirements here\nfunc main() {\n    // TODO: Write your code here, recruit!\n    fmt.Println(\"Challenge started!\")\n    \n}\n\n// helperFunction - Break it down into manageable pieces!\n// Purpose: Add any helper functions you need\nfunc helperFunction() {\n    // TODO: Implement helper logic\n    \n}\n\n// SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "Rust": "\n// main - This is your entry point!\n// Purpose: Implement the challenge requirements here\nfn main() {\n    // TODO: Write your code here, recruit!\n    println!(\"Challenge started!\");\n    \n}\n\n// helper_function - Break it down into manageable pieces!\n// Purpose: Add any helper functions you need\nfn helper_function() {\n    // TODO: Implement helper logic\n    \n}\n\n// SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "C": "\n#include <stdio.h>\n\n// main - This is your entry point!\n// Purpose: Implement the challenge requirements here\nint main() {\n    // TODO: Write your code here, recruit!\n    printf(\"Challenge started!\\n\");\n    \n    return 0;\n}\n\n// helperFunction - Break it down into manageable pieces!\n// Purpose: Add any helper functions you need\nvoid helperFunction() {\n    // TODO: Implement helper logic\n    \n}\n\n// SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "C++": "\n#include <iostream>\nusing namespace std;\n\n// main - This is your entry point!\n// Purpose: Implement the challenge requirements here\nint main() {\n    // TODO: Write your code here, recruit!\n    cout << \"Challenge started!\" << endl;\n    \n    return 0;\n}\n\n// helperFunction - Break it down into manageable pieces!\n// Purpose: Add any helper functions you need\nvoid helperFunction() {\n    // TODO: Implement helper logic\n    \n}\n\n// SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "C#": "\nusing System;\n\nclass TuxChallenge\n{\n    // Main - This is your entry point!\n    // Purpose: Implement the challenge requirements here\n    static void Main()\n    {\n        // TODO: Write your code here, recruit!\n        Console.WriteLine(\"Challenge started!\");\n        \n    }\n    \n    // HelperFunction - Break it down into manageable pieces!\n    // Purpose: Add any helper functions you need\n    static void HelperFunction()\n    {\n        // TODO: Implement helper logic\n        \n    }\n}\n\n// SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "Assembly": "\nsection .data\n    ; Data section - Define your variables here\n    msg db 'Challenge started!', 0xA\n    len equ $ - msg\n\nsection .bss\n    ; BSS section - Uninitialized data\n\nsection .text\n    global _start\n\n; Main entry point\n; Purpose: Implement the challenge requirements here\n_start:\n    ; TODO: Write your code here, recruit!\n    \n    ; Exit program\n    mov eax, 1\n    xor ebx, ebx\n    int 0x80\n\n; Helper function - Break it down into manageable pieces!\n; Purpose: Add any helper functions you need\nhelper_function:\n    ; TODO: Implement helper logic\n    ret\n\n; SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "LOLCODE": "\nHAI 1.2\n    CAN HAS STDIO?\n    \n    BTW Main function - This is your entry point!\n    BTW Purpose: Implement the challenge requirements here\n    \n    VISIBLE \"Challenge started!\"\n    \n    BTW TODO: Write your code here, recruit!\n    \n    \n    BTW Helper section - Break it down!\n    BTW Purpose: Add any helper logic you need\n    \n    \nKTHXBYE\n\nBTW SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "Holy C": "\nvoid main() {\n    // Main function - This is your entry point!\n    // Purpose: Implement the challenge requirements here\n    \n    // TODO: Write your code here, recruit!\n    Print(\"Challenge started!\\n\");\n    \n}\n\nvoid HelperFunction() {\n    // Helper function - Break it down!\n    // Purpose: Add any helper logic you need\n    \n    // TODO: Implement helper logic\n    \n}\n\n// SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "INTERCAL": "\nNOTE Main program - This is your entry point!\nNOTE Purpose: Implement the challenge requirements here\n\nDO ,1 <- #1\nPLEASE DO ,1 SUB #1 <- #1\nPLEASE DO ,1 SUB #2 <- #0\n\nNOTE TODO: Write your code here, recruit!\n\n\nNOTE Helper section - Break it down!\nNOTE Purpose: Add any helper logic you need\n\n\nNOTE SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "Shakespeare": "\nThe Challenge: A Programming Play.\n\nRomeo, a young programmer.\nJuliet, a beautiful variable.\n\n                    Act I: The Beginning.\n\n                    Scene I: The Challenge Starts.\n\n[Enter Romeo and Juliet]\n\nRomeo:\n  Thou art as brave as the sum of a strong hero and a noble knight!\n  Speak thy mind!\n\nJuliet:\n  TODO: Write your code here, recruit!\n\n[Exeunt]\n\nSERGEANT TUX SAYS: Show me what you've got, recruit!\n",
+    "Rockstar": "\n(Main function - This is your entry point!)\n(Purpose: Implement the challenge requirements here)\n\nThe challenge is ready\nShout \"Challenge started!\"\n\n(TODO: Write your code here, recruit!)\n\n\n(Helper section - Break it down!)\n(Purpose: Add any helper logic you need)\n\n\n(SERGEANT TUX SAYS: \"Show me what you've got, recruit!\")\n",
+    "Perl": "\n#!/usr/bin/perl\nuse strict;\nuse warnings;\n\n# Main function - This is your entry point!\n# Purpose: Implement the challenge requirements here\nsub main {\n    # TODO: Write your code here, recruit!\n    print \"Challenge started!\\n\";\n}\n\n# Helper function - Break it down!\n# Purpose: Add any helper logic you need\nsub helper_function {\n    # TODO: Implement helper logic\n}\n\nmain();\n\n# SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "PHP": "\n<?php\n// Main function - This is your entry point!\n// Purpose: Implement the challenge requirements here\nfunction main() {\n    // TODO: Write your code here, recruit!\n    echo \"Challenge started!\\n\";\n}\n\n// Helper function - Break it down!\n// Purpose: Add any helper logic you need\nfunction helperFunction() {\n    // TODO: Implement helper logic\n}\n\nmain();\n\n// SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n?>",
+    "Ruby": "\n# Main function - This is your entry point!\n# Purpose: Implement the challenge requirements here\ndef main\n  # TODO: Write your code here, recruit!\n  puts 'Challenge started!'\nend\n\n# Helper function - Break it down!\n# Purpose: Add any helper logic you need\ndef helper_function\n  # TODO: Implement helper logic\nend\n\nmain\n\n# SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "Kotlin": "\n// Main function - This is your entry point!\n// Purpose: Implement the challenge requirements here\nfun main() {\n    // TODO: Write your code here, recruit!\n    println(\"Challenge started!\")\n}\n\n// Helper function - Break it down!\n// Purpose: Add any helper logic you need\nfun helperFunction() {\n    // TODO: Implement helper logic\n}\n\n// SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "MATLAB": "\n% Main function - This is your entry point!\n% Purpose: Implement the challenge requirements here\nfunction main()\n    % TODO: Write your code here, recruit!\n    disp('Challenge started!');\nend\n\n% Helper function - Break it down!\n% Purpose: Add any helper logic you need\nfunction helperFunction()\n    % TODO: Implement helper logic\nend\n\n% SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "Visual Basic": "\nModule TuxChallenge\n    ' Main function - This is your entry point!\n    ' Purpose: Implement the challenge requirements here\n    Sub Main()\n        ' TODO: Write your code here, recruit!\n        Console.WriteLine(\"Challenge started!\")\n    End Sub\n    \n    ' Helper function - Break it down!\n    ' Purpose: Add any helper logic you need\n    Sub HelperFunction()\n        ' TODO: Implement helper logic\n    End Sub\nEnd Module\n\n' SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "R": "\n# Main function - This is your entry point!\n# Purpose: Implement the challenge requirements here\nmain <- function() {\n  # TODO: Write your code here, recruit!\n  print('Challenge started!')\n}\n\n# Helper function - Break it down!\n# Purpose: Add any helper logic you need\nhelperFunction <- function() {\n  # TODO: Implement helper logic\n}\n\nmain()\n\n# SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "Swift": "\n// Main function - This is your entry point!\n// Purpose: Implement the challenge requirements here\nfunc main() {\n    // TODO: Write your code here, recruit!\n    print(\"Challenge started!\")\n}\n\n// Helper function - Break it down!\n// Purpose: Add any helper logic you need\nfunc helperFunction() {\n    // TODO: Implement helper logic\n}\n\nmain()\n\n// SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "COBOL": "\nIDENTIFICATION DIVISION.\nPROGRAM-ID. TuxChallenge.\n\nDATA DIVISION.\nWORKING-STORAGE SECTION.\n*> Variables go here\n\nPROCEDURE DIVISION.\nMAIN-PROCEDURE.\n    *> Main procedure - This is your entry point!\n    *> Purpose: Implement the challenge requirements here\n    \n    DISPLAY 'Challenge started!'.\n    \n    *> TODO: Write your code here, recruit!\n    \n    STOP RUN.\n\n*> SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "Fortran": "\nprogram TuxChallenge\n    implicit none\n    \n    ! Main program - This is your entry point!\n    ! Purpose: Implement the challenge requirements here\n    \n    print *, 'Challenge started!'\n    \n    ! TODO: Write your code here, recruit!\n    \ncontains\n    ! Helper function - Break it down!\n    ! Purpose: Add any helper logic you need\n    subroutine helperFunction()\n        ! TODO: Implement helper logic\n    end subroutine\n    \nend program TuxChallenge\n\n! SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "Modern Fortran": "\nprogram TuxModernChallenge\n    use iso_fortran_env\n    implicit none\n    \n    ! Main program - This is your entry point!\n    ! Purpose: Implement the challenge requirements here\n    \n    print *, 'Challenge started!'\n    \n    ! TODO: Write your code here, recruit!\n    \ncontains\n    ! Helper function - Break it down!\n    ! Purpose: Add any helper logic you need\n    pure function helperFunction(x) result(y)\n        integer, intent(in) :: x\n        integer :: y\n        ! TODO: Implement helper logic\n        y = x\n    end function\n    \nend program TuxModernChallenge\n\n! SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "Bash": "\n#!/bin/bash\n\n# Main function - This is your entry point!\n# Purpose: Implement the challenge requirements here\nmain() {\n    # TODO: Write your code here, recruit!\n    echo \"Challenge started!\"\n}\n\n# Helper function - Break it down!\n# Purpose: Add any helper logic you need\nhelper_function() {\n    # TODO: Implement helper logic\n    :\n}\n\nmain\n\n# SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "Lisp": "\n; Main function - This is your entry point!\n; Purpose: Implement the challenge requirements here\n(defun main ()\n  ; TODO: Write your code here, recruit!\n  (print \"Challenge started!\"))\n\n; Helper function - Break it down!\n; Purpose: Add any helper logic you need\n(defun helper-function ()\n  ; TODO: Implement helper logic\n  nil)\n\n(main)\n\n; SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "F#": "\n// Main function - This is your entry point!\n// Purpose: Implement the challenge requirements here\nlet main () =\n    // TODO: Write your code here, recruit!\n    printfn \"Challenge started!\"\n\n// Helper function - Break it down!\n// Purpose: Add any helper logic you need\nlet helperFunction () =\n    // TODO: Implement helper logic\n    ()\n\nmain ()\n\n// SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "Zig": "\nconst std = @import(\"std\");\n\n// Main function - This is your entry point!\n// Purpose: Implement the challenge requirements here\npub fn main() !void {\n    const stdout = std.io.getStdOut().writer();\n    \n    // TODO: Write your code here, recruit!\n    try stdout.print(\"Challenge started!\\n\", .{});\n}\n\n// Helper function - Break it down!\n// Purpose: Add any helper logic you need\nfn helperFunction() void {\n    // TODO: Implement helper logic\n}\n\n// SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "D": "\nimport std.stdio;\n\n// Main function - This is your entry point!\n// Purpose: Implement the challenge requirements here\nvoid main() {\n    // TODO: Write your code here, recruit!\n    writeln(\"Challenge started!\");\n}\n\n// Helper function - Break it down!\n// Purpose: Add any helper logic you need\nvoid helperFunction() {\n    // TODO: Implement helper logic\n}\n\n// SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "Haskell": "\n-- Main function - This is your entry point!\n-- Purpose: Implement the challenge requirements here\nmain :: IO ()\nmain = do\n    -- TODO: Write your code here, recruit!\n    putStrLn \"Challenge started!\"\n\n-- Helper function - Break it down!\n-- Purpose: Add any helper logic you need\nhelperFunction :: a -> a\nhelperFunction x = x\n    -- TODO: Implement helper logic\n\n-- SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "Scala": "\nobject TuxChallenge {\n  // Main function - This is your entry point!\n  // Purpose: Implement the challenge requirements here\n  def main(args: Array[String]): Unit = {\n    // TODO: Write your code here, recruit!\n    println(\"Challenge started!\")\n  }\n  \n  // Helper function - Break it down!\n  // Purpose: Add any helper logic you need\n  def helperFunction(): Unit = {\n    // TODO: Implement helper logic\n  }\n}\n\n// SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "Elixir": "\n# Main function - This is your entry point!\n# Purpose: Implement the challenge requirements here\ndefmodule TuxChallenge do\n  def main do\n    # TODO: Write your code here, recruit!\n    IO.puts \"Challenge started!\"\n  end\n  \n  # Helper function - Break it down!\n  # Purpose: Add any helper logic you need\n  def helper_function do\n    # TODO: Implement helper logic\n  end\nend\n\nTuxChallenge.main()\n\n# SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "Dart": "\n// Main function - This is your entry point!\n// Purpose: Implement the challenge requirements here\nvoid main() {\n  // TODO: Write your code here, recruit!\n  print('Challenge started!');\n}\n\n// Helper function - Break it down!\n// Purpose: Add any helper logic you need\nvoid helperFunction() {\n  // TODO: Implement helper logic\n}\n\n// SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "Lua": "\n-- Main function - This is your entry point!\n-- Purpose: Implement the challenge requirements here\nfunction main()\n    -- TODO: Write your code here, recruit!\n    print(\"Challenge started!\")\nend\n\n-- Helper function - Break it down!\n-- Purpose: Add any helper logic you need\nfunction helperFunction()\n    -- TODO: Implement helper logic\nend\n\nmain()\n\n-- SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "Julia": "\n# Main function - This is your entry point!\n# Purpose: Implement the challenge requirements here\nfunction main()\n    # TODO: Write your code here, recruit!\n    println(\"Challenge started!\")\nend\n\n# Helper function - Break it down!\n# Purpose: Add any helper logic you need\nfunction helper_function()\n    # TODO: Implement helper logic\nend\n\nmain()\n\n# SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "Nim": "\n# Main function - This is your entry point!\n# Purpose: Implement the challenge requirements here\nproc main() =\n  # TODO: Write your code here, recruit!\n  echo \"Challenge started!\"\n\n# Helper function - Break it down!\n# Purpose: Add any helper logic you need\nproc helperFunction() =\n  # TODO: Implement helper logic\n  discard\n\nmain()\n\n# SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n"
+  }
+}
