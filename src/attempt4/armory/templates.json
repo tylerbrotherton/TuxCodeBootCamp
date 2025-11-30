@@ -1,0 +1,76 @@
+{
+  "file_extensions": {
+    "Python": ".py",
+    "JavaScript": ".js",
+    "Go": ".go",
+    "Rust": ".rs",
+    "C": ".c",
+    "C++": ".cpp",
+    "Assembly": ".asm",
+    "C#": ".cs",
+    "LOLCODE": ".lol"
+  },
+  "comment_styles": {
+    "Python": {
+      "start": "#",
+      "end": "#"
+    },
+    "JavaScript": {
+      "start": "//",
+      "end": "//"
+    },
+    "Go": {
+      "start": "//",
+      "end": "//"
+    },
+    "Rust": {
+      "start": "//",
+      "end": "//"
+    },
+    "C": {
+      "start": "//",
+      "end": "//"
+    },
+    "C++": {
+      "start": "//",
+      "end": "//"
+    },
+    "Assembly": {
+      "start": ";",
+      "end": ";"
+    },
+    "C#": {
+      "start": "//",
+      "end": "//"
+    },
+    "LOLCODE": {
+      "start": "BTW",
+      "end": "BTW"
+    }
+  },
+  "header_lines": {
+    "separator": "======================================================================",
+    "title": "TUX CODE BOOT CAMP - CHALLENGE FILE",
+    "fields": {
+      "recruit": "Recruit: {student}",
+      "challenge": "Challenge: {challenge}",
+      "language": "Language: {language}",
+      "difficulty": "Difficulty: {difficulty}",
+      "date": "Date: {date}"
+    },
+    "mission_briefing_header": "MISSION BRIEFING:",
+    "orders_header": "YOUR ORDERS:",
+    "orders": [
+      "1. Read the mission briefing carefully",
+      "2. Complete the function implementation below",
+      "3. Test your code thoroughly",
+      "4. Report back to Sergeant Tux when complete!"
+    ],
+    "reminder": "REMEMBER: Comments are your BATTLE PLAN! Use them!"
+  },
+  "language_templates": {
+    "Python": "\ndef main():\n    \"\"\"\n    Main function - This is where your code execution begins!\n    Purpose: Implement the challenge requirements here\n    \"\"\"\n    # TODO: Write your code here, recruit!\n    pass\n\n\nif __name__ == \"__main__\":\n    main()\n\n# SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "JavaScript": "\n// Main function - This is your entry point!\nfunction main() {\n    // TODO: Write your code here, recruit!\n}\n\nmain();\n\n// SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n",
+    "Go": "\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n    // TODO: Write your code here, recruit!\n    fmt.Println(\"Challenge started!\")\n}\n\n// SERGEANT TUX SAYS: \"Show me what you've got, recruit!\"\n"
+  }
+}

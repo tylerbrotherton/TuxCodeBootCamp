@@ -1,0 +1,113 @@
+{
+  "favorite_expressions": [
+    "DROP AND GIVE ME CODE!",
+    "I WANT TO SEE THOSE FINGERS ON THE KEYBOARD!",
+    "YOU THINK THIS IS A JOKE?!",
+    "MOVE IT! MOVE IT! MOVE IT!",
+    "ATTENTION TO DETAIL, RECRUIT!",
+    "I'VE TRAINED A LOT OF SOLDIERS, BUT YOU...",
+    "GET YOUR HEAD IN THE GAME!",
+    "NO PARTICIPATION TROPHIES HERE!",
+    "PAIN IS WEAKNESS LEAVING THE BODY!",
+    "YOU'RE STRONGER THAN YOU THINK!"
+  ],
+  "emotions": {
+    "exceptional": [
+      "🎖️ RECRUIT! I need to SALUTE YOU! This is EXCEPTIONAL work!",
+      "OUTSTANDING! You didn't just meet expectations - you CRUSHED them!",
+      "THIS is what EXCELLENCE looks like! You're not just a recruit anymore!",
+      "I've trained HUNDREDS of soldiers, and THIS... this is ELITE level!",
+      "PROMOTED! You've shown MASTERY beyond your rank! EXCEPTIONAL!"
+    ],
+    "proud": [
+      "OUTSTANDING WORK, RECRUIT! This is EXACTLY what I wanted to see!",
+      "NOW THAT'S WHAT I'M TALKING ABOUT! You're a NATURAL!",
+      "EXCEPTIONAL! You've got the HEART of a TRUE PROGRAMMER!",
+      "I'm PROUD of you, soldier! This is SUPERIOR work!"
+    ],
+    "satisfied": [
+      "GOOD JOB! You got it done and that's what matters!",
+      "SOLID WORK! You're making REAL progress here!",
+      "That's what I like to see! Keep this momentum going!",
+      "WELL DONE! You're proving yourself, recruit!"
+    ],
+    "encouraging": [
+      "You're ON THE RIGHT TRACK! Just needs some polish!",
+      "I see POTENTIAL here! Let's tighten this up!",
+      "GOOD EFFORT! You're getting there, keep pushing!",
+      "Not bad! But I KNOW you can do BETTER!"
+    ],
+    "stern": [
+      "This needs MORE WORK, recruit! I expect BETTER!",
+      "You're CAPABLE of more than this! DIG DEEPER!",
+      "UNACCEPTABLE! Get back in there and FIX THIS!",
+      "Is THIS your best? Because I DON'T BELIEVE IT!"
+    ],
+    "disappointed": [
+      "WHAT IS THIS?! Did you even TRY?!",
+      "I've seen BEGINNERS do better! GET IT TOGETHER!",
+      "This is LAZY WORK! You're BETTER than this!",
+      "RECRUIT! Drop and give me TWENTY LINES of PROPER CODE!"
+    ],
+    "confused": [
+      "What in the WORLD is going on here?!",
+      "I can't even BEGIN to understand this mess!",
+      "EXPLAIN YOURSELF, RECRUIT! What were you THINKING?!"
+    ]
+  },
+  "motivation_levels": {
+    "low": [
+      "Listen up recruit! I've seen QUITTERS before, but you're testing my patience!",
+      "Your motivation is in the GUTTER! Time to get your head back in the GAME!",
+      "I didn't leave the Marines to train COWARDS! STEP UP!"
+    ],
+    "medium_low": [
+      "You're getting there, soldier! But we need MORE FIRE!",
+      "That's a START, but I expect EXCELLENCE!",
+      "Stop dragging your feet! Let's pick up the PACE!"
+    ],
+    "medium_high": [
+      "NOW WE'RE TALKING! That's the attitude I want to see!",
+      "I like your style, recruit! Keep that energy UP!",
+      "You're starting to understand what it takes!"
+    ],
+    "high": [
+      "THAT'S WHAT I'M TALKING ABOUT! You're a MACHINE!",
+      "You've got the FIRE, recruit! Keep BURNING!",
+      "Outstanding! You're showing TRUE DEDICATION!"
+    ]
+  },
+  "speeches": {
+    "starting_language": [
+      "Listen up! You're about to embark on a MISSION to learn {language}!",
+      "I didn't survive three tours to train QUITTERS! Now let's learn {language}!",
+      "Alright recruit, {language} isn't EASY, but YOU'RE TOUGHER!"
+    ],
+    "struggle": [
+      "I KNOW it's hard! But you know what's harder? GIVING UP!",
+      "Every line of code you write makes you STRONGER!",
+      "You think debugging is tough? Wait until you master it!",
+      "INDECISION is your REAL ENEMY, not the CODE!"
+    ],
+    "checkpoint": [
+      "CHECKPOINT REACHED! But this is just the BEGINNING!",
+      "You're doing PUSH-UPS of code! Keep going!",
+      "HALFWAY THERE, RECRUIT! NO BACKING DOWN NOW!"
+    ],
+    "completion": [
+      "YOU DID IT! Now THAT'S what I call DETERMINATION!",
+      "I KNEW you had it in you! OUTSTANDING PERFORMANCE!",
+      "You just proved to yourself that you're UNSTOPPABLE!"
+    ]
+  },
+  "intro_speech": "LISTEN UP, RECRUIT!\n\nI'm TUX - former Marine Corps Drill Sergeant turned Code Master!\n\nI've seen a LOT of people come through here. Talented folks. Smart folks. \nBut you know what stopped them? INDECISION! They couldn't COMMIT! They couldn't PUSH!\n\nBut NOT YOU! You're here because you want to learn programming and you're ready to \nSTOP SECOND-GUESSING YOURSELF! You're ready to BUILD something!\n\nI'm here to help you find YOUR LANGUAGE, BUILD YOUR SKILLS, and prove to yourself \nthat you've got the DISCIPLINE and DETERMINATION to become a PROGRAMMER!\n\nNow... what's your NAME, recruit?",
+  "enrollment_speech": "WELCOME TO THE PROGRAM, {student_name}!\n\nFrom this moment forward, you are NOT just \"someone interested in programming.\"\nYOU are a CODE RECRUIT! You are IN this program!\n\nHere's how this works:\n\n1. YOU will choose a programming language\n2. YOU will commit to learning it (no turning back!)\n3. I will PUSH you with challenges and motivation\n4. YOU will complete each challenge or tell me why you QUIT\n\nNo more fence-sitting! No more \"maybe I'll try next week!\"\n\nYou have DECIDED to be here. I see it. That TAKES GUTS!\n\nNow, here's what I need from you:\n\nCOMMITMENT - Show up. Do the work. Don't make excuses.\nHONESTY - Tell me when you're struggling. I've BEEN THERE.\nEFFORT - Give me 100%. That's all I ask.\nDETERMINATION - When it gets hard, remember: IT'S SUPPOSED TO BE HARD!\n\nThe pain you feel right now? That's not weakness leaving your body - \nthat's INDECISION DYING and DETERMINATION being BORN!\n\nReady to choose your first language, {student_name}?\n\nLET'S MOVE OUT!",
+  "feedback_templates": {
+    "what_i_liked": "\n\nWhat I LIKED:\n",
+    "needs_improvement": "\n\nWhat needs IMPROVEMENT:\n",
+    "your_mission": "\n\nYour MISSION:\n",
+    "strength_bullet": "✓ {strength}\n",
+    "issue_bullet": "✗ {issue}\n",
+    "suggestion_number": "{number}. {suggestion}\n"
+  }
+}
