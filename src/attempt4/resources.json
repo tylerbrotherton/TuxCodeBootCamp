@@ -1,0 +1,171 @@
+{
+  "example_file_structure": {
+    "resources/": {
+      "ui_strings.json": "All UI labels, buttons, titles",
+      "tux_personality.json": "All Tux's dialogue and responses",
+      "language_data.json": "Programming language information",
+      "challenge_templates.json": "Challenge descriptions",
+      "code_templates.json": "Code file templates"
+    },
+    "config.json": "Application configuration"
+  },
+
+  "ui_strings.json_example": {
+    "app_title": "TUX CODE BOOT CAMP - Where Weak Coders Come to GET STRONG!",
+    "banner_title": "TUX CODE BOOT CAMP",
+    "banner_subtitle": "Where Indecision DIES and Code is FORGED!",
+    "buttons": {
+      "enroll": "ENROLL IN BOOT CAMP!",
+      "accept_challenge": "ACCEPT CHALLENGE!",
+      "submit_code": "SUBMIT CODE",
+      "learning_resources": "LEARNING RESOURCES"
+    },
+    "labels": {
+      "motivation_level": "Motivation Level: {level}/100",
+      "difficulty": "Difficulty: {difficulty}",
+      "your_code": "YOUR CODE:",
+      "tux_analysis": "TUX'S ANALYSIS:"
+    },
+    "messages": {
+      "empty_name_warning": "I need a NAME, recruit! SPEAK UP!",
+      "waiting_submission": "Waiting for submission...",
+      "reviewing_code": "Sergeant Tux is reviewing your code...\n\n"
+    }
+  },
+
+  "tux_personality.json_example": {
+    "favorite_expressions": [
+      "DROP AND GIVE ME CODE!",
+      "I WANT TO SEE THOSE FINGERS ON THE KEYBOARD!",
+      "YOU THINK THIS IS A JOKE?!",
+      "MOVE IT! MOVE IT! MOVE IT!"
+    ],
+    "emotions": {
+      "exceptional": [
+        "🎖️ RECRUIT! I need to SALUTE YOU! This is EXCEPTIONAL work!",
+        "OUTSTANDING! You didn't just meet expectations - you CRUSHED them!"
+      ],
+      "proud": [
+        "OUTSTANDING WORK, RECRUIT! This is EXACTLY what I wanted to see!",
+        "NOW THAT'S WHAT I'M TALKING ABOUT! You're a NATURAL!"
+      ],
+      "disappointed": [
+        "WHAT IS THIS?! Did you even TRY?!",
+        "I've seen BEGINNERS do better! GET IT TOGETHER!"
+      ]
+    },
+    "speeches": {
+      "intro": "LISTEN UP, RECRUIT!\n\nI'm TUX - former Marine Corps Drill Sergeant...",
+      "enrollment": "WELCOME TO THE PROGRAM, {student_name}!...",
+      "starting_language": [
+        "Listen up! You're about to embark on a MISSION to learn {language}!",
+        "Alright recruit, {language} isn't EASY, but YOU'RE TOUGHER!"
+      ]
+    },
+    "motivation_responses": {
+      "low": [
+        "Listen up recruit! I've seen QUITTERS before!",
+        "Your motivation is in the GUTTER!"
+      ],
+      "high": [
+        "THAT'S WHAT I'M TALKING ABOUT! You're a MACHINE!",
+        "Outstanding! You're showing TRUE DEDICATION!"
+      ]
+    }
+  },
+
+  "language_data.json_example": {
+    "Python": {
+      "description": "High-level, interpreted language known for readability and versatility.",
+      "difficulty": "Beginner",
+      "drill_sergeant_take": "PERFECT for BEGINNERS! Easy to READ but don't let that make you LAZY!",
+      "use_cases": ["Web Development", "Data Science", "AI/ML"],
+      "sample_code": "print('Hello, Tux!')\ndef greet(name):\n    return f'Welcome, {name}!'",
+      "learning_resources": [
+        "https://docs.python.org/3/tutorial/",
+        "https://www.codecademy.com/learn/learn-python-3"
+      ]
+    },
+    "JavaScript": {
+      "description": "The language of the WEB!",
+      "difficulty": "Beginner-Intermediate",
+      "drill_sergeant_take": "JavaScript is EVERYWHERE!",
+      "use_cases": ["Web Development", "Frontend", "Full Stack"],
+      "sample_code": "console.log('Hello, Tux!');",
+      "learning_resources": [
+        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+      ]
+    }
+  },
+
+  "challenge_templates.json_example": {
+    "Python": [
+      {
+        "name": "BEGINNER DRILL",
+        "description": "Implement a Fibonacci sequence generator with memorization using decorators",
+        "difficulty": "Easy"
+      },
+      {
+        "name": "INTERMEDIATE MISSION",
+        "description": "Build a CLI todo app with SQLite persistence and CRUD operations",
+        "difficulty": "Medium"
+      }
+    ],
+    "JavaScript": [
+      {
+        "name": "BEGINNER DRILL",
+        "description": "Build form validation with regex patterns",
+        "difficulty": "Easy"
+      }
+    ]
+  },
+
+  "code_templates.json_example": {
+    "header_template": "{comment}{'=' * 70}\n{comment} TUX CODE BOOT CAMP - CHALLENGE FILE\n{comment} Recruit: {student}\n{comment} Challenge: {challenge}",
+    "templates_by_language": {
+      "Python": {
+        "main": "def main():\n    \"\"\"Main function\"\"\"\n    # TODO: Write your code here\n    pass\n\nif __name__ == \"__main__\":\n    main()",
+        "footer": "# SERGEANT TUX SAYS: \"Show me what you've got, recruit!\""
+      },
+      "JavaScript": {
+        "main": "function main() {\n    // TODO: Write your code here\n}\n\nmain();",
+        "footer": "// SERGEANT TUX SAYS: \"Show me what you've got, recruit!\""
+      }
+    },
+    "comment_styles": {
+      "Python": {"start": "#", "end": "#"},
+      "JavaScript": {"start": "//", "end": "//"},
+      "C": {"start": "//", "end": "//"}
+    }
+  },
+
+  "config.json_example": {
+    "app": {
+      "title": "TUX CODE BOOT CAMP",
+      "version": "2.0",
+      "window_size": "1400x900"
+    },
+    "colors": {
+      "background": "#1a1a1a",
+      "secondary_bg": "#2b2b2b",
+      "primary": "#ff6b6b",
+      "success": "#00ff00",
+      "warning": "#ffd93d",
+      "text": "#ffffff"
+    },
+    "fonts": {
+      "header": ["Arial", 18, "bold"],
+      "body": ["Arial", 11],
+      "code": ["Courier", 10]
+    },
+    "paths": {
+      "challenges_dir": "TuxBootCamp_Challenges",
+      "resources_dir": "resources"
+    },
+    "features": {
+      "ai_analysis": true,
+      "auto_file_creation": true,
+      "motivation_tracking": true
+    }
+  }
+}
