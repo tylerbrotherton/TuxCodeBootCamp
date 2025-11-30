@@ -1,0 +1,247 @@
+
+ {
+  "app": {
+    "title": "TUX CODE BOOT CAMP",
+    "version": "2.0.0",
+    "window_size": "1400x900",
+    "min_window_size": "1024x768",
+    "author": "Sergeant Tux",
+    "description": "Where Indecision DIES and Code is FORGED!"
+  },
+
+  "paths": {
+    "armory": "armory",
+    "sandbox": "sandbox",
+    "protocol": "armory/protocol.json",
+    "cadence": "armory/cadence.json",
+    "ordnance": "armory/ordnance.json",
+    "operations": "armory/operations.json",
+    "templates": "armory/templates.json"
+  },
+
+  "colors": {
+    "background": "#1a1a1a",
+    "secondary_bg": "#2b2b2b",
+    "tertiary_bg": "#3b3b3b",
+    "quaternary_bg": "#4b4b4b",
+    
+    "primary": "#ff6b6b",
+    "secondary": "#ff8c8c",
+    "success": "#00ff00",
+    "success_light": "#90EE90",
+    "warning": "#ffd93d",
+    "danger": "#ff0000",
+    "info": "#9370db",
+    
+    "text_primary": "#ffffff",
+    "text_secondary": "#cccccc",
+    "text_disabled": "#666666",
+    "code_text": "#00ff00",
+    "code_bg": "#1a1a1a",
+    
+    "emotion_colors": {
+      "exceptional": "#00ff00",
+      "proud": "#00ff00",
+      "satisfied": "#90EE90",
+      "encouraging": "#ffd93d",
+      "stern": "#ff8c00",
+      "disappointed": "#ff0000",
+      "confused": "#9370db",
+      "neutral": "#ffffff"
+    },
+    
+    "difficulty_colors": {
+      "Easy": "#00ff00",
+      "Medium": "#ffd93d",
+      "Hard": "#ff6b6b",
+      "Expert": "#ff0000",
+      "Beginner": "#90EE90",
+      "Intermediate": "#ffa500",
+      "Advanced": "#ff4500",
+      "Novelty": "#9370db"
+    }
+  },
+
+  "fonts": {
+    "header_large": ["Arial", 32, "bold"],
+    "header": ["Arial", 18, "bold"],
+    "subheader": ["Arial", 16, "bold"],
+    "subheader_small": ["Arial", 14, "bold"],
+    
+    "body": ["Arial", 11],
+    "body_bold": ["Arial", 11, "bold"],
+    "body_large": ["Arial", 12],
+    "body_small": ["Arial", 9],
+    "body_italic": ["Arial", 11, "italic"],
+    
+    "code": ["Courier", 10],
+    "code_large": ["Courier", 11],
+    "code_small": ["Courier", 9],
+    "code_header": ["Courier", 12, "bold"],
+    
+    "button": ["Arial", 12, "bold"],
+    "button_large": ["Arial", 14, "bold"],
+    "button_small": ["Arial", 10, "bold"],
+    "button_tiny": ["Arial", 9]
+  },
+
+  "ui": {
+    "padding": {
+      "tiny": 3,
+      "small": 5,
+      "medium": 10,
+      "large": 20,
+      "xlarge": 30
+    },
+    
+    "text_area_height": {
+      "tiny": 3,
+      "small": 5,
+      "medium": 8,
+      "large": 10,
+      "xlarge": 15,
+      "xxlarge": 20
+    },
+    
+    "text_area_width": {
+      "narrow": 50,
+      "medium": 70,
+      "normal": 80,
+      "wide": 100,
+      "xwide": 120
+    },
+    
+    "button_padding": {
+      "x_small": 10,
+      "x_medium": 15,
+      "x_large": 20,
+      "y_small": 5,
+      "y_medium": 8,
+      "y_large": 10
+    },
+    
+    "window_sizes": {
+      "login": "900x700",
+      "enrollment": "700x550",
+      "main": "1400x900",
+      "challenge": "700x480",
+      "submission": "900x700",
+      "resources": "600x250"
+    }
+  },
+
+  "motivation": {
+    "initial_level": 50,
+    "min_level": 0,
+    "max_level": 100,
+    
+    "thresholds": {
+      "low": 20,
+      "medium_low": 50,
+      "medium_high": 80,
+      "high": 100
+    },
+    
+    "changes": {
+      "commit_language": 10,
+      "accept_challenge": 15,
+      "complete_challenge": 25,
+      "code_correct": 20,
+      "code_excellent": 30,
+      "code_partial": 10,
+      "code_failed": -5,
+      "skip_challenge": -10,
+      "idle_penalty": -2
+    }
+  },
+
+  "ai": {
+    "enabled": true,
+    "model": "claude-sonnet-4-20250514",
+    "max_tokens": 1000,
+    "api_endpoint": "https://api.anthropic.com/v1/messages",
+    
+    "analysis_criteria": {
+      "correctness_weight": 0.4,
+      "completeness_weight": 0.3,
+      "quality_weight": 0.3
+    },
+    
+    "score_thresholds": {
+      "exceptional": 95,
+      "proud": 85,
+      "satisfied": 70,
+      "encouraging": 50,
+      "stern": 30
+    }
+  },
+
+  "challenges": {
+    "auto_create_file": true,
+    "auto_open_file": true,
+    "file_timestamp": true,
+    "difficulty_scaling": true,
+    
+    "difficulty_order": ["Easy", "Medium", "Hard"],
+    
+    "file_naming": {
+      "pattern": "{challenge_name}_{timestamp}{extension}",
+      "timestamp_format": "%Y%m%d_%H%M%S",
+      "safe_chars": true,
+      "max_length": 100
+    }
+  },
+
+  "features": {
+    "ai_code_analysis": true,
+    "auto_file_creation": true,
+    "motivation_tracking": true,
+    "progress_saving": false,
+    "achievement_system": false,
+    "leaderboard": false,
+    "tux_emotions": true,
+    "sound_effects": false,
+    "dark_mode": true
+  },
+
+  "behavior": {
+    "auto_save_interval": 300,
+    "session_timeout": 3600,
+    "max_retry_attempts": 3,
+    "show_tips": true,
+    "confirm_quit": true,
+    "remember_last_language": true
+  },
+
+  "debug": {
+    "enabled": false,
+    "verbose": false,
+    "log_file": "tux_debug.log",
+    "show_resource_errors": true
+  },
+
+  "messages": {
+    "file_creation_error": "Could not create challenge file",
+    "file_open_error": "Could not open file",
+    "resource_load_error": "Failed to load resources",
+    "config_load_error": "Configuration file not found",
+    "api_error": "AI analysis unavailable"
+  },
+
+  "shortcuts": {
+    "quit": "Ctrl+Q",
+    "new_challenge": "Ctrl+N",
+    "submit_code": "Ctrl+Enter",
+    "show_help": "F1",
+    "toggle_fullscreen": "F11"
+  },
+
+  "metadata": {
+    "created": "2025",
+    "last_updated": "2025-01-01",
+    "config_version": "2.0",
+    "compatible_with": ["Python 3.8+"],
+    "license": "MIT",
+    "repository": "https://github.com/tylerbrotherton/tux-boot-camp"
+  }
+}
