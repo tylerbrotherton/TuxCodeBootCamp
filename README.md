@@ -2,7 +2,7 @@
 
 > **Where Indecision DIES and Code is FORGED!**
 
-[![License: Apache 2.0]
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: professional](https://img.shields.io/badge/code%20style-military%20grade-green.svg)](https://github.com/tylerbrotherton/tux-boot-camp)
 
