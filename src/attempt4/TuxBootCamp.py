@@ -1,7 +1,3 @@
-"""
-TUX CODE BOOT CAMP - Professional Refactored Version
-ALL STRINGS STORED IN JSON FILES - NO HARDCODED TEXT IN PYTHON!
-"""
 
 import tkinter as tk
 from tkinter import ttk, messagebox, scrolledtext
@@ -18,12 +14,7 @@ from typing import Dict, List, Any, Optional
 
 
 class ResourceManager:
-    """
-    Loads and manages all application strings from external JSON files.
-    NO STRINGS ARE HARDCODED IN THIS CLASS!
-    """
-    
-    def __init__(self, resources_dir: str = "resources"):
+    def __init__(self, resources_dir: str = "armory"):
         self.resources_dir = Path(resources_dir)
         self.data: Dict[str, Any] = {}
         self._load_all_resources()
@@ -31,11 +22,11 @@ class ResourceManager:
     def _load_all_resources(self):
         """Load all JSON resource files"""
         resource_files = {
-            'ui': 'ui_strings.json',
-            'tux': 'tux_personality.json',
-            'languages': 'language_data.json',
-            'challenges': 'challenge_templates.json',
-            'templates': 'code_templates.json'
+            'ui': 'protocol.json',
+            'tux': 'cadence.json',
+            'languages': 'ordnance.json',
+            'challenges': 'operations.json',
+            'templates': 'templates.json'
         }
         
         for key, filename in resource_files.items():
@@ -351,11 +342,6 @@ class EnrollmentSpeech:
 
 
 class TuxBootCampApp:
-    """
-    Main application - demonstrates how ZERO strings are hardcoded.
-    Everything comes from JSON files!
-    """
-    
     def __init__(self, root):
         self.root = root
         
@@ -419,7 +405,6 @@ class TuxBootCampApp:
 
 
 def main():
-    """Entry point - NO STRINGS HERE EITHER!"""
     root = tk.Tk()
     app = TuxBootCampApp(root)
     root.mainloop()
