@@ -1,0 +1,51 @@
+{
+  "app": {
+    "title": "TUX CODE BOOT CAMP",
+    "version": "2.0.0",
+    "window_size": "1400x900"
+  },
+  "colors": {
+    "background": "#1a1a1a",
+    "secondary_bg": "#2b2b2b",
+    "tertiary_bg": "#3b3b3b",
+    "primary": "#ff6b6b",
+    "success": "#00ff00",
+    "warning": "#ffd93d",
+    "text": "#ffffff",
+    "code": "#00ff00"
+  },
+  "fonts": {
+    "header": [
+      "Arial",
+      18,
+      "bold"
+    ],
+    "large_header": [
+      "Arial",
+      32,
+      "bold"
+    ],
+    "body": [
+      "Arial",
+      11
+    ],
+    "code": [
+      "Courier",
+      10
+    ]
+  },
+  "paths": {
+    "challenges_dir": "sandbox",
+    "resources_dir": "armory"
+  },
+  "motivation": {
+    "initial_level": 50,
+    "changes": {
+      "commit_language": 10,
+      "accept_challenge": 15,
+      "code_correct": 20,
+      "code_partial": 10,
+      "code_failed": -5
+    }
+  }
+}
