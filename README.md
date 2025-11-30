@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![Code style: professional](https://img.shields.io/badge/code%20style-military%20grade-green.svg)](https://github.com/yourusername/tux-boot-camp)
+[![Code style: professional](https://img.shields.io/badge/code%20style-military%20grade-green.svg)](https://github.com/tylerbrotherton/tux-boot-camp)
 
 **Created by Tyler Brotherton** | Powered by Sergeant Tux
 
@@ -275,8 +275,8 @@ json
 {
   "developer": {
     "name": "Tyler Brotherton",
-    "email": "your@email.com",
-    "github": "yourusername"
+    "email": "tylerbrotherton14@email.com",
+    "github": "tylerbrotherton"
   },
   "personalization": {
     "boot_camp_name": "TYLER'S CODE ACADEMY",
@@ -337,9 +337,9 @@ This project is licensed under the **MIT License** - see [LICENSE](LICENSE) for 
 ## 📞 Contact & Support
 
 - **Email:** your@email.com
-- **GitHub Issues:** [Report bugs](https://github.com/yourusername/tux-boot-camp/issues)
-- **Discussions:** [Join the conversation](https://github.com/yourusername/tux-boot-camp/discussions)
-- **Support:** [Buy me a coffee](https://buymeacoffee.com/yourname) ☕
+- **GitHub Issues:** [Report bugs](https://github.com/tylerbrotherton/tux-boot-camp/issues)
+- **Discussions:** [Join the conversation](https://github.com/tylerbrotherton/tux-boot-camp/discussions)
+- **Support:** [Buy me a coffee](https://buymeacoffee.com/tylerbrotherton) ☕
 
 ---
 
@@ -381,7 +381,7 @@ This is a **programming education tool**. Sergeant Tux's tough love approach is 
 
 **Stop reading. Start coding. Sergeant Tux is waiting.**
 
-[⬇️ Download Now](https://github.com/yourusername/tux-boot-camp/releases) | [📖 Read the Docs](docs/) | [⭐ Star on GitHub](https://github.com/yourusername/tux-boot-camp)
+[⬇️ Download Now](https://github.com/tylerbrotherton/tux-boot-camp/releases) | [📖 Read the Docs](docs/) | [⭐ Star on GitHub](https://github.com/tylerbrotherton/tux-boot-camp)
 
 ---
 
