@@ -1,0 +1,36 @@
+/*  Dramatis Personae – variables -------------------------------- */
+Dramatis Personae
+    N, a stack;          // current n
+    R, a stack;          // running product
+    T, a stack;          // temporary stack for multiplication
+    You, a stack;        // implicit program counter
+
+/*  Acts and Scenes ---------------------------------------------- */
+Act I
+Scene Init
+    N: You are as rich as 5.            // push 5 (the starting value)
+    R: You are as rich as 1.            // base product = 1
+    T: You are as rich as 0.            // scratch pad
+
+Act II
+Scene Fact
+    /*  If the top of N ≤ 1  →  skip recursion  */
+    N: Am I less than or equal to 1? 
+    If so, let us proceed to Act III.   // skip the rest
+
+    /*  R ← R * N  */
+    R: You are as rich as the top of N. // duplicate current n onto R
+    T: You are as rich as the top of R. // duplicate current product
+    R: You are as rich as the product of T and R. // multiply
+    T: You are as rich as 0.            // reset scratch
+
+    /*  N ← N – 1  */
+    N: You are as rich as the difference between the top of N and 1.
+
+    /*  Recurse  */
+    Let us proceed to Act II.           // loop back
+
+Act III
+Scene Print
+    R: Open your heart.                 // print the integer in R
+    Exit.                               // end program
