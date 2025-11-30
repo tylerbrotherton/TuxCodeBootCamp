@@ -2,7 +2,7 @@
 
 > **Where Indecision DIES and Code is FORGED!**
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: Apache 2.0]
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: professional](https://img.shields.io/badge/code%20style-military%20grade-green.svg)](https://github.com/tylerbrotherton/tux-boot-camp)
 
@@ -304,7 +304,7 @@ Contributions are welcome! Here's how you can help:
 
 ## 📜 License
 
-This project is licensed under the **MIT License** - see [LICENSE](LICENSE) for details.
+This project is licensed under the **Apache 2.0 License** - see [LICENSE](LICENSE) for details.
 
 ---
 
