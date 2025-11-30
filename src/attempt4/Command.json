@@ -1,12 +1,13 @@
-
- {
+{
   "app": {
     "title": "TUX CODE BOOT CAMP",
-    "version": "2.0.0",
+    "version": "3",
     "window_size": "1400x900",
     "min_window_size": "1024x768",
-    "author": "Sergeant Tux",
-    "description": "Where Indecision DIES and Code is FORGED!"
+    "author": "Tyler Brotherton",
+    "Tux Artist" : "Larry Ewring",
+    "Special thanks" : [ "Simone Martha","Evan Cooney", "Jacskon Treece"],
+    "description": "Where Indecision DIES and programmers are FORGED!"
   },
 
   "paths": {
