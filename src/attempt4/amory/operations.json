@@ -2,34 +2,34 @@
   "Python": [
     {
       "name": "BEGINNER DRILL",
-      "description": "Implement a Fibonacci sequence generator with memorization using decorators",
+      "description": "Write a script that read a text file and counts how many times a word appears. Output the top 5 most frequent words",
       "difficulty": "Easy"
     },
     {
       "name": "INTERMEDIATE MISSION",
-      "description": "Build a CLI todo app with SQLite persistence and CRUD operations",
+      "description": "Build a simple command-line tool that fetchs weather data for a city using a public API (e.g., OpenWeatherMap). Display the current temperature and conditions. [HINT consider JSON]",
       "difficulty": "Medium"
     },
     {
       "name": "ADVANCED OPERATION",
-      "description": "Create a multi-threaded web scraper with proxy rotation and rate limiting",
+      "description": "Create a script that downloads all images from a webpage and saves them in a folder. Ensure the script handles errors like missing images. ",
       "difficulty": "Hard"
     }
   ],
   "JavaScript": [
     {
       "name": "BEGINNER DRILL",
-      "description": "Build form validation with regex patterns and real-time error feedback",
+      "description": "Build a webpage with a form that validates user input (e.g., email format, password length). Show error messages in real time. ",
       "difficulty": "Easy"
     },
     {
       "name": "INTERMEDIATE MISSION",
-      "description": "Create PWA with Service Workers and IndexedDB for offline functionality",
+      "description": "Create a to-do list app that stores tasks in the browser’s local storage. Users should add, delete, and mark tasks as complete.",
       "difficulty": "Medium"
     },
     {
       "name": "ADVANCED OPERATION",
-      "description": "Develop real-time collaborative editor using WebSockets and Operational Transformation",
+      "description": "Develop a simple chat app using WebSockets (e.g., with `ws` library). Messages should appear in real time for all connected users.",
       "difficulty": "Hard"
     }
   ],
@@ -84,23 +84,31 @@
       "difficulty": "Hard"
     }
   ],
-  "C++": [
+"C++": [
     {
-      "name": "BEGINNER DRILL",
-      "description": "Design polymorphic game entity system with virtual inheritance",
-      "difficulty": "Easy"
+  "name": "Bootcamp: Basic Data Logger System",
+  "description": "Design a simple data logger system to collect sensor data and save it to a file.\n\n- Create a base class `Sensor` with a virtual `read()` method.\n- Derive `TemperatureSensor` and `HumiditySensor` with unique logic.\n- Use `std::shared_ptr` for memory-safe sensor management.\n- Log 10 simulated readings to a file (`data_log.txt`) in a loop.\n- Ensure no raw pointers or manual memory management.\n\nSurvive the Bootcamp: Focus on correctness and memory safety.",
+  "difficulty": "Easy (Green Recruit)"
+}
+
+     {
+        "name": "Bootcamp: Device Management System",
+        "description": "Design a multi-threaded device management system under fire. \n- Create a base `Device` class with polymorphic behavior (e.g., `update()`). \n- Derive `Sensor` and `Actuator` classes with unique logic. \n- Use `std::shared_ptr` and `std::unique_ptr` for memory safety. \n- Simulate concurrent updates from 50 devices using `std::jthread` and `std::atomic`. \n- Add a kill switch to terminate all threads after 10 seconds. \nSurvive the stress test of 1000+ iterations.",
+        "difficulty": "Medium"
     },
     {
-      "name": "INTERMEDIATE MISSION",
-      "description": "Implement template metaprogramming for compile-time factorial calculation",
-      "difficulty": "Medium"
+        "name": "Field Operation: Compile-Time Config Validator",
+        "description": "Build a compile-time configuration validator using templates and `constexpr`. \n- Define a `Config` struct with fields like `max_connections` and `timeout`. \n- Use `std::variant` and `std::visit` to validate input types. \n- Enforce constraints via `static_assert` and `if constexpr`. \n- Generate a JSON schema for runtime validation. \nSurvive the enemy: invalid types and runtime overrides. \nUse C++20 concepts for type-safe constraints.",
+        "difficulty": "Hard"
     },
     {
-      "name": "ADVANCED OPERATION",
-      "description": "Create OpenGL-based 2D renderer with texture atlases and shaders",
-      "difficulty": "Hard"
+        "name": "Elite: Operation Signal Storm",
+        "description": "Create a real-time signal processing pipeline under fire. \n- Implement a `SignalProcessor` class with FFT and filtering. \n- Use `std::vector` and `std::array` for memory-optimized data storage. \n- Process 1000+ samples/second using `std::thread` and `std::atomic`. \n- Add a thread-safe ring buffer with `std::lock_guard` and `std::condition_variable`. \n- Export results to a binary file with `std::ofstream`. \nSurvive the enemy: data loss and race conditions. \nUse `std::execution::par` for parallel algorithms.",
+        "difficulty": "Elite"
     }
-  ],
+]
+
+
   "Assembly": [
     {
       "name": "BEGINNER DRILL",
@@ -118,23 +126,32 @@
       "difficulty": "Hard"
     }
   ],
-  "C#": [
-    {
-      "name": "BEGINNER DRILL",
-      "description": "Build WPF calculator with MVVM pattern and data binding",
+"C#": [
+      {
+      "name": "Rookie drill",
+      "description": "Create a game system with different characters. \nMake a base class 'Character' with virtual 'Update()' and 'Draw()' methods. \nCreate 'Player' and 'Enemy' classes that override these methods. \nStore all characters in a List<Character> and call Update/Draw on each. \nUse inheritance and polymorphism to manage behavior.",
       "difficulty": "Easy"
     },
+
     {
-      "name": "INTERMEDIATE MISSION",
-      "description": "Create file synchronization utility with ZIP compression",
+      "name": "Intermediate Mission",
+      "description": "Set up a multi-threaded data aggregation system. \n- Fetch simulated sensor data from two sources. \n- Merge results and calculate averages. \n- Add a 5-second kill switch for long-running tasks. \nUse async/await, Task, and thread-safe collections. \nSurvive the stress test of concurrent access.",
       "difficulty": "Medium"
     },
     {
-      "name": "ADVANCED OPERATION",
-      "description": "Develop multiplayer networked game with SignalR and concurrency control",
+      "name": "Field Operation: Data Pipeline",
+      "description": "Build a generic data pipeline under fire. \n- Load CSV/JSON files with unknown formats. \n- Validate rows (e.g., reject corrupted data). \n- Transform data (e.g., convert strings to numbers). \n- Export clean data to a database. \nSurvive edge cases like missing fields or invalid types. \nUse generics, LINQ, and error handling.",
       "difficulty": "Hard"
+    },
+    {
+      "name": "Elite: Operation Silent Protocol",
+      "description": "Deploy a secure REST API for an order system. \n- Define Product, Order, and Customer models. \n- Build endpoints for: \n   - Creating orders with payment validation \n   - Updating order status \n   - Querying order history \n- Add middleware for logging and error reporting. \n- Secure endpoints with JWT tokens. \nUse ASP.NET Core and dependency injection. \nSurvive the enemy: invalid requests and unauthorized access.",
+      "difficulty": "Elite"
     }
-  ],
+]
+
+]
+
   "LOLCODE": [
     {
       "name": "BEGINNER DRILL",
@@ -410,17 +427,17 @@
   "Bash": [
     {
       "name": "BEGINNER DRILL",
-      "description": "Write system backup script with compression",
+      "description": " Write a script that compresses all `.txt` files in a directory into a single ZIP file. ",
       "difficulty": "Easy"
     },
     {
       "name": "INTERMEDIATE MISSION",
-      "description": "Create log rotation and cleanup automation tool",
+      "description": "Create a script that monitors disk usage. If free space drops below 10%, send an email alert using a command-line tool like `mail`.",
       "difficulty": "Medium"
     },
     {
       "name": "ADVANCED OPERATION",
-      "description": "Build complete CI/CD pipeline orchestrator",
+      "description": "Build a script that automates deploying a static website to a server (e.g., copy files, restart a web server, and log the deployment). [HINT think about DevOps]",
       "difficulty": "Hard"
     }
   ],
