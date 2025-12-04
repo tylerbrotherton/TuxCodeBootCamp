@@ -134,13 +134,11 @@ int main(int argc, char **argv)
         }
     } else if (strcmp(mode, "dec") == 0) {
         if (aes_ecb_decrypt(data, data_len, key, out) != 0) {
-            fprintf(stderr, "Decryption failed (data must be a multiple of 
-16 bytes)\n");
+            fprintf(stderr, "Decryption failed (data must be a multiple of 16 bytes)\n");
             return EXIT_FAILURE;
         }
     } else {
-        fprintf(stderr, "Unknown mode: %s (must be \"enc\" or \"dec\")\n", 
-mode);
+        fprintf(stderr, "Unknown mode: %s (must be \"enc\" or \"dec\")\n", mode);
         return EXIT_FAILURE;
     }
 
