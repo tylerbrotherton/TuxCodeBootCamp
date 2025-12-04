@@ -128,8 +128,7 @@ int main(int argc, char **argv)
     unsigned char out[HEX_BUF_SZ];
     if (strcmp(mode, "enc") == 0) {
         if (aes_ecb_encrypt(data, data_len, key, out) != 0) {
-            fprintf(stderr, "Encryption failed (data must be a multiple of 
-16 bytes)\n");
+            fprintf(stderr, "Encryption failed (data must be a multiple of 16 bytes)\n");
             return EXIT_FAILURE;
         }
     } else if (strcmp(mode, "dec") == 0) {
