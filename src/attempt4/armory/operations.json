@@ -89,7 +89,7 @@
   "name": "Bootcamp: Basic Data Logger System",
   "description": "Design a simple data logger system to collect sensor data and save it to a file.\n\n- Create a base class `Sensor` with a virtual `read()` method.\n- Derive `TemperatureSensor` and `HumiditySensor` with unique logic.\n- Use `std::shared_ptr` for memory-safe sensor management.\n- Log 10 simulated readings to a file (`data_log.txt`) in a loop.\n- Ensure no raw pointers or manual memory management.\n\nSurvive the Bootcamp: Focus on correctness and memory safety.",
   "difficulty": "Easy (Green Recruit)"
-}
+},
 
      {
         "name": "Bootcamp: Device Management System",
@@ -106,7 +106,7 @@
         "description": "Create a real-time signal processing pipeline under fire. \n- Implement a `SignalProcessor` class with FFT and filtering. \n- Use `std::vector` and `std::array` for memory-optimized data storage. \n- Process 1000+ samples/second using `std::thread` and `std::atomic`. \n- Add a thread-safe ring buffer with `std::lock_guard` and `std::condition_variable`. \n- Export results to a binary file with `std::ofstream`. \nSurvive the enemy: data loss and race conditions. \nUse `std::execution::par` for parallel algorithms.",
         "difficulty": "Elite"
     }
-]
+],
 
 
   "Assembly": [
@@ -150,7 +150,7 @@
     }
 ]
 
-]
+],
 
   "LOLCODE": [
     {
